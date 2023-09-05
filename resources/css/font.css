@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: 300;
     src: url("../fonts/SCDream/SCDreamLight.woff2") format("woff2"),
-    url("../fonts/SCDream/SCDreamLight.woff") format("woff"),
-    url("../fonts/SCDream/SCDreamLight.otf") format("opentype");
+        url("../fonts/SCDream/SCDreamLight.woff") format("woff"),
+        url("../fonts/SCDream/SCDreamLight.otf") format("opentype");
 }
 
 @font-face {
@@ -12,8 +12,8 @@
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/SCDream/SCDreamRegular.woff2") format("woff2"),
-    url("../fonts/SCDream/SCDreamRegular.woff") format("woff"),
-    url("../fonts/SCDream/SCDreamRegular.otf") format("opentype");
+        url("../fonts/SCDream/SCDreamRegular.woff") format("woff"),
+        url("../fonts/SCDream/SCDreamRegular.otf") format("opentype");
 }
 
 @font-face {
@@ -21,8 +21,8 @@
     font-style: normal;
     font-weight: 500;
     src: url("../fonts/SCDream/SCDreamMedium.woff2") format("woff2"),
-    url("../fonts/SCDream/SCDreamMedium.woff") format("woff"),
-    url("../fonts/SCDream/SCDreamMedium.otf") format("opentype");
+        url("../fonts/SCDream/SCDreamMedium.woff") format("woff"),
+        url("../fonts/SCDream/SCDreamMedium.otf") format("opentype");
 }
 
 @font-face {
@@ -30,6 +30,30 @@
     font-style: normal;
     font-weight: 600;
     src: url("../fonts/SCDream/SCDreamBold.woff2") format("woff2"),
-    url("../fonts/SCDream/SCDreamBold.woff") format("woff"),
-    url("../fonts/SCDream/SCDreamBold.otf") format("opentype");
+        url("../fonts/SCDream/SCDreamBold.woff") format("woff"),
+        url("../fonts/SCDream/SCDreamBold.otf") format("opentype");
+}
+
+@media screen and (max-width: 1280px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 13px;
+    }
 }
