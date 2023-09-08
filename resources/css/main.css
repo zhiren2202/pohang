@@ -45,12 +45,10 @@
   font-size: 2.5em;
   font-weight: 600;
 }
-.slick-dotted.main_visual,
-.slick-dotted.imgbanner,
-.slick-dotted.event_month,
-.slick-dotted.event_week,
-.slick-dotted.link_banner {
-  margin-bottom: 0;
+
+.slick-dotted.slick-slider
+{
+    margin-bottom: 0;
 }
 
 [class*="_controller"] {
@@ -79,21 +77,22 @@ button[class*="arrow_board_"] {
   background-image: url(../images/arrow_review_board_next.png);
 }
 
-
 .main_visual_wrapper {
+  position: relative;
   width: 100%;
   height: 50em;
   max-height: 90vh;
-  position: relative;
+  color: #ffffff;
 }
 .main_visual {
   width: 100%;
   height: 100%;
 }
 .main_visual [class*="slide"] {
-  width: 100%;
-  height: 90vh;
   position: relative;
+  width: 100%;
+  height: 50em;
+  max-height: 90vh;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -241,10 +240,6 @@ button[class*="arrow_board_"] {
 .main_visual_paging {
   line-height: 4em;
 }
-.main_visual_paging .slick-dots li {
-  color: #fff;
-}
-
 .imgbanner_paging,
 .event_month_paging,
 .event_week_paging,
@@ -275,12 +270,11 @@ button[class*="arrow_board_"] {
 
 .quickmenu {
   width: 100%;
-  background-color: #153176;
 }
 .quickmenu [class*="slide"] {
   width: 100%;
+  padding: 0.5em 0;
   background-repeat: no-repeat;
-  background-color: #eee;
   font-weight: 500;
   text-align: center;
 }
@@ -289,31 +283,61 @@ button[class*="arrow_board_"] {
   height: 5em;
   margin: 0 auto;
   background-image: url('../images/img_quick_menu.png');
+  background-position-y: 0.4em;
 }
 .quickmenu .slide1 .quickmenu_icon {
-  background-position: 0.4em 0.6em;
+  background-position-x: 0.4em;
 }
 .quickmenu .slide2 .quickmenu_icon {
-  background-position: 39.5em 0.6em;
+  background-position-x: 39.5em;
+}
+.quickmenu .slide3 .quickmenu_icon {
+  background-position-x: 79em;
+}
+.quickmenu .slide4 .quickmenu_icon {
+  background-position-x: 118.3em;
+}
+.quickmenu .slide5 .quickmenu_icon {
+  background-position-x: 157.8em;
+}
+.quickmenu .slide6 .quickmenu_icon {
+  background-position-x: 153.4em;
+}
+.quickmenu .slide7 .quickmenu_icon {
+  background-position-x: 192.8em;
+}
+.quickmenu .slide8 .quickmenu_icon {
+  background-position-x: 144.6em;
+}
+.quickmenu .slide9 .quickmenu_icon {
+  background-position-x: 227.8em;
+}
+.quickmenu .slide10 .quickmenu_icon {
+  background-position-x: 48.3em;
 }
 
 .quickmenu [class*="slide"] .quickmenu_title {
+  display: inline-block;
   cursor: pointer;
   font-size: 1.25em;
 }
 .quickmenu [class*="slide"] .blank::after {
   content: '';
-  display: inline-block;
+  display: block;
+  float: right;
   width: 1.25em;
   height: 1.25em;
-  vertical-align: middle;
   margin-left: 0.4em;
   background-image: url(../images/btn_blank.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 .quickmenu [class*="slide"]:hover {
+  cursor: pointer;
   color: #153176;
+}
+.quickmenu [class*="slide"]:hover .quickmenu_icon {
+  background-position-y: 4.9em;
 }
 .quickmenu [class*="slide"]:hover .blank::after {
   background-image: url(../images/btn_blank_on.png);
