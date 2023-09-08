@@ -9,7 +9,8 @@ $('.main_visual').slick({
     dots : true,
     appendDots: '.main_visual_paging',
     customPaging: function (slider, i) {
-        return '<span>'+(i + 1)+'</span>' + '/' + slider.slideCount;
+        // return '<span>'+(i + 1)+'</span>' + '/' + slider.slideCount;
+        return (i + 1) + '/' + slider.slideCount;
     }
 });
 
@@ -92,7 +93,7 @@ $('.imgbanner').slick({
     }
 });
 
-location.href = "#tab_page1";
+// location.href = "#tab_page1";
 $('.item_circle').slick ({
   slidesToShow: 6,
   infinite: false,
@@ -173,7 +174,7 @@ $('.event_week').slick({
   dots : true,
   appendDots: '.event_week_paging',
   customPaging: function (slider, i) {
-      return '<span>'+(i + 1)+'</span>' + '/' + slider.slideCount;
+      return (i + 1) + '/' + slider.slideCount;
   }
 });
 $('.imgslide').slick({	 
