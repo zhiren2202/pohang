@@ -41,19 +41,25 @@
 }
 
 @media screen and (max-width: 768px) {
-    body {
+    body  {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 650px) {
-    body {
+    body  {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 320px) {
-    body {
+    body  {
         font-size: 13px;
     }
+}
+
+body {
+    --pink: #dd2676;
+    --blue: #296ed6;
+    --navy: #253b5c;
 }
