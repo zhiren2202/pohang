@@ -14,24 +14,48 @@
 </head>
 <body>
 
-<!-- <header class="header">
-    <h1>LOGO</h1>
-    <ul class="gnb">
+<div id="popup_wrap" class="popup_wrap">
+    <div class="popup_image">
+        <img src="./resources/images/popup/202211161716_RZ5oc42.jpg" alt="pohang TV 포항시 생생하고 다양한 포항 소식!">
+        <img src="./resources/images/popup/202211231939_dtLAYlV.jpg" alt="POHANG HIPHOP 포항힙합">
+        <img src="./resources/images/popup/202303281057_j2LZfkf.jpg" alt="피어라! 미항 구룡포">
+        <img src="./resources/images/popup/202308291454_vcrqxqJ.jpeg" alt="칠포 재즈 페스티벌
+            2023 CHILPO JAZZ FESTIVAL
+            9/23 SAT 9/24 SUN 칠포해수욕장 상설무대">
+        <img src="./resources/images/popup/202308301550_PulaLDl.png" alt="음악과 캠핑이 있는 힐링의 도시, 포항 
+            2023 MUSIC&CAMPING Festa 포항 영일대 
+            2023 09.16 Sat. ~ 09.17 Sun. 2일간 
+            포항 영일대 해수욕장 일원">
+        <img src="./resources/images/popup/202309081302_Bha5eka.png" alt="포항 관광택시 요금 조정 안내
+            포항 오면 꼭 타고 싶은 포항 명품 관광택시
+            포항 관광택시">
+    </div>
+    <div class="popup_bottom">
+        <input class="popup_checkbox" type="checkbox" />
+        <label>하루 닫기</label>
+        <button id="close_btn" type="button"><span class="blind">팝업창 닫기</span></button>
+    </div>
+</div>
+
+<header class="header">
+    <h1 class="header_logo">
+        <a href="#" title="pohang 포항시 퐝퐝여행"><span class="blind">메인페이지로 이동</span></a>
+    </h1>
+    <ul class="header_gnb"> 
         <li><a href="#">포항은지금</a></li>
         <li><a href="#">추천여행</a></li>
         <li><a href="#">포항관광</a></li>
         <li><a href="#">여행정보</a></li>
         <li><a href="#">커뮤니티</a></li>
     </ul>
-    <nav class="lnb">
-        <ul>
-            <li><a href="#">메뉴1</a></li>
-            <li><a href="#">메뉴1</a></li>
-        </ul>
-    </nav>
-    <a href="#">링크</a>
-    <button type="button">링크</button>
-</header> -->
+    <div class="header_link">
+        <a class="header_link_1" href="#"><span>요즘 뭐해?</span></a>
+        <a class="header_link_2" href="#"><span>스페이스워크 운영</span></a>
+        <a class="header_link_3" href="#"><span>퐝여행 레시피</span></a>
+        <button class="header_search" type="button"></button>
+        <button class="header_menu" type="button"></button>
+    </div>
+</header>
 
 <main class="container">
 
@@ -87,77 +111,187 @@
             <button type="button" class="main_visual_play"></button>
             <button type="button" class="main_visual_pause on"></button>
         </div>
+        <section class="main_visual_bottom">
+            <div class="main_visual_banner">
+                <a class="main_visual_banner__1" href="#">
+                    <img src="./resources/images/main_title_webzine.png" alt="퐝매거진">
+                    <p class="main_visual_banner_subtitle">쓱~보고 바로 떠나는 여행</p>
+                </a>
+                <a class="main_visual_banner__2" href="#">
+                    <img src="./resources/images/main_title_trip.png" alt="퐝여행 레시피">
+                    <p class="main_visual_banner_subtitle">뚝딱뚝딱 만드는 여행</p>
+                </a>
+            </div>
+            <div class="main_visual_searchbar">
+                <select class="searchbar_selectbox first" name="" id="">
+                    <option value="">누구와 함께 여행하세요?</option>
+                    <option value="가족">가족</option>
+                    <option value="친구">친구</option>
+                    <option value="연인">연인</option>
+                    <option value="혼자">혼자</option>
+                    <option value="단체">단체</option>
+                </select>
+                <select class="searchbar_selectbox" name="" id="">
+                    <option value="">여행에서 무엇을 하고 싶으세요?</option>
+                    <option value="">힐링/산책</option>
+                    <option value="">인생샷 찍기</option>
+                    <option value="">체험/액티비티</option>
+                    <option value="">역사탐방</option>
+                    <option value="">쇼핑/전통시장 투어</option>
+                </select>
+                <button class="searchbar_confirm" type="submit">맞춤코스확인</button>
+            </div>
+        </section>
     </div>
+
     
     <div class="quickmenu_section">
-        <div class="quickmenu_controller position_middle_controller">
+        <div class="quickmenu_controller controller_position-middle">
             <button type="button" class="arrow_board_prev"></button>
             <button type="button" class="arrow_board_next"></button>
         </div>
         <div class="quickmenu">
-            <div class="slide1">
+            <a class="slide1">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title blank" href="#">포항12경 VR</a>
-            </div>
-            <div class="slide2">
+                <span class="quickmenu_title blank" href="#">포항12경 VR</span>
+            </a>
+            <a class="slide2">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">시티투어예약</a>
-            </div>
-            <div class="slide3">
+                <span class="quickmenu_title" href="#">시티투어예약</span>
+            </a>
+            <a class="slide3">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">관광택시예약</a>
-            </div>
-            <div class="slide4">
+                <span class="quickmenu_title" href="#">관광택시예약</span>
+            </a>
+            <a class="slide4">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">문화관광해설신청</a>
-            </div>
-            <div class="slide5">
+                <span class="quickmenu_title" href="#">문화관광해설신청</span>
+            </a>
+            <a class="slide5">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">관광지도신청</a>
-            </div>
-            <div class="slide6">    
+                <span class="quickmenu_title" href="#">관광지도신청</span>
+            </a>
+            <a class="slide6">    
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">지도 다운로드</a>
-            </div>
-            <div class="slide7">
+                <span class="quickmenu_title" href="#">지도 다운로드</span>
+            </a>
+            <a class="slide7">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">관광안내소</a>
-            </div>
-            <div class="slide8">
+                <span class="quickmenu_title" href="#">관광안내소</span>
+            </a>
+            <a class="slide8">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">호미반도는 지금</a>
-            </div>
-            <div class="slide9">
+                <span class="quickmenu_title" href="#">호미반도는 지금</span>
+            </a>
+            <a class="slide9">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title" href="#">오시는 길</a>
-            </div>
-            <div class="slide10">
+                <span class="quickmenu_title" href="#">오시는 길</span>
+            </a>
+            <a class="slide10">
                 <div class="quickmenu_icon"></div>
-                <a class="quickmenu_title blank" href="#">교통정보센터</a>
-            </div>
+                <span class="quickmenu_title blank" href="#">교통정보센터</span>
+            </a>
         </div>
+    </div>
+
+    <div class="tab_best_section">
+        <h2 class="banner_title"><strong>BEST</strong> 퐝퐝</h2>
+    
+        <ul class="tab_best">
+            <li id="tab_best1" class="tab_best_button">
+                <input type="radio" checked name="tabmenu" id="tab_best_name1" />
+                <label for="tab_best_name1"><p>핫플레이스</p></label>
+                <div class="tab_best_contents">
+                    <figure>
+                        <img src="./resources/images/best/1661912709320_D.jpg" alt="">
+                        <figcaption>
+                            포항해상스카이워크
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./resources/images/best/1661912709320_D.jpg" alt="">
+                        <figcaption>
+                            포항해상스카이워크
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./resources/images/best/1661912709320_D.jpg" alt="">
+                        <figcaption>
+                            포항해상스카이워크
+                        </figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li id="tab_best2" class="tab_best_button">
+                <input type="radio" name="tabmenu" id="tab_best_name2" />
+                <label for="tab_best_name2"><p>TV촬영지(북부)</p></label>
+                <div class="tab_best_contents">2</div>
+            </li>
+            <li id="tab_best3" class="tab_best_button">
+                <input type="radio" name="tabmenu" id="tab_best_name3" />
+                <label for="tab_best_name3"><p>TV촬영지(남부)</p></label>
+                <div class="tab_best_contents">3</div>
+            </li>
+            <li id="tab_best4" class="tab_best_button">
+                <input type="radio" checked name="tabmenu" id="tab_best_name4" />
+                <label for="tab_best_name4"><p>데이트코스</p></label>
+                <div class="tab_best_contents">4</div>
+            </li>
+            <li id="tab_best5" class="tab_best_button">
+                <input type="radio" name="tabmenu" id="tab_best_name5" />
+                <label for="tab_best_name5"><p>힐링여행</p></label>
+                <div class="tab_best_contents">5</div>
+            </li>
+            <li id="tab_best6" class="tab_best_button">
+                <input type="radio" name="tabmenu" id="tab_best_name6" />
+                <label for="tab_best_name6"><p>전통시장의 정을 찾아서</p></label>
+                <div class="tab_best_contents">6</div>
+            </li>
+        </ul>
+    
     </div>
     
     <div class="tab_page_wrapper">
             <h2 class="banner_title">권역별 즐겨퐝</h2>
+            <!-- <div class="tab_buttons">
+                <a class="tab_button" href="#tab_page1">도심권</a>
+                <a class="tab_button" href="#tab_page2">남부권</a>
+                <a class="tab_button" href="#tab_page3">북부권</a>
+            </div> -->
             <div class="tab_page_section">
                 <ul>
                     <li id="tab_page1" class="tab_page">
-                        <a class="tab_button first" href="#tab_page1">도심권</a>
+                        <div class="tab_buttons">
+                            <a class="tab_button target" href="#tab_page1">도심권</a>
+                            <a class="tab_button" href="#tab_page2">남부권</a>
+                            <a class="tab_button" href="#tab_page3">북부권</a>
+                        </div>
                         <div class="tab_page_contents">
                             <p class="tab_page_subtitle">"포항 도심에서 즐기는 <strong>여유롭게 편리한</strong> 여행"</p>
                             <div class="item_circle_group">
-                                <div class="item_circle_controller screen_pc_hide_controller">
-                                    <button type="button" class="arrow_board_prev"></button>
-                                    <button type="button" class="arrow_board_next"></button>
+                                <div class="item_circle_controller controller_position-middle screen_pc_hide_controller">
+                                    <button type="button" class="arrow_zone_circle_prev"></button>
+                                    <button type="button" class="arrow_zone_circle_next"></button>
                                 </div>
                                 <div class="item_circle">
-                                    <a class="slide1" href="#"><span class="blind">포항10미1 보러가기</span></a>
-                                    <a class="slide2" href="#"><span class="blind">체험 보러가기</span></a>
-                                    <a class="slide3" href="#"><span class="blind">쇼핑 보러가기</span></a>
-                                    <a class="slide4" href="#"><span class="blind">해수욕장 보러가기</span></a>
-                                    <a class="slide5" href="#"><span class="blind">맛집 보러가기</span></a>
-                                    <a class="slide6" href="#"><span class="blind">숙소 보러가기</span></a>
+                                    <a class="slide1" href="#">
+                                        <div class="icon">포항10미1</div>
+                                    </a>
+                                    <a class="slide2" href="#">
+                                        <div class="icon">체험</div>
+                                    </a>
+                                    <a class="slide3" href="#">
+                                        <div class="icon">쇼핑</div>
+                                    </a>
+                                    <a class="slide4" href="#">
+                                        <div class="icon">해수욕장</div>
+                                    </a>
+                                    <a class="slide5" href="#">
+                                        <div class="icon">맛집</div>
+                                    </a>
+                                    <a class="slide6" href="#">
+                                        <div class="icon">숙소</div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="course_1">
@@ -206,21 +340,37 @@
                         <img class="tab_page_map" src="./resources/images/main_zone/main_area_map1.png" alt="도심권 지도">
                     </li>
                     <li id="tab_page2" class="tab_page">
-                        <a class="tab_button" href="#tab_page2">남부권</a>
+                        <div class="tab_buttons">
+                            <a class="tab_button" href="#tab_page1">도심권</a>
+                            <a class="tab_button target" href="#tab_page2">남부권</a>
+                            <a class="tab_button" href="#tab_page3">북부권</a>
+                        </div>
                         <div class="tab_page_contents">
-                            <p class="tab_page_subtitle">"포항 도심에서 즐기는 <strong>여유롭게 편리한</strong> 여행"</p>
+                            <p class="tab_page_subtitle">"<strong>역사.문화</strong>의 숨결과 자연이 어우러지는 즐거운 여행"</p>
                             <div class="item_circle_group">
-                                <div class="item_circle_controller screen_pc_hide_controller">
-                                    <button type="button" class="arrow_board_prev"></button>
-                                    <button type="button" class="arrow_board_next"></button>
+                                <div class="item_circle_controller controller_position-middle screen_pc_hide_controller">
+                                    <button type="button" class="arrow_zone_circle_prev"></button>
+                                    <button type="button" class="arrow_zone_circle_next"></button>
                                 </div>
                                 <div class="item_circle">
-                                    <a class="slide1" href="#"><span class="blind">포항10미2 보러가기</span></a>
-                                    <a class="slide2" href="#"><span class="blind">체험 보러가기</span></a>
-                                    <a class="slide3" href="#"><span class="blind">쇼핑 보러가기</span></a>
-                                    <a class="slide4" href="#"><span class="blind">해수욕장 보러가기</span></a>
-                                    <a class="slide5" href="#"><span class="blind">맛집 보러가기</span></a>
-                                    <a class="slide6" href="#"><span class="blind">숙소 보러가기</span></a>
+                                    <a class="slide1" href="#">
+                                        <div class="icon">포항10미1</div>
+                                    </a>
+                                    <a class="slide2" href="#">
+                                        <div class="icon">체험</div>
+                                    </a>
+                                    <a class="slide3" href="#">
+                                        <div class="icon">쇼핑</div>
+                                    </a>
+                                    <a class="slide4" href="#">
+                                        <div class="icon">해수욕장</div>
+                                    </a>
+                                    <a class="slide5" href="#">
+                                        <div class="icon">맛집</div>
+                                    </a>
+                                    <a class="slide6" href="#">
+                                        <div class="icon">숙소</div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="course_1">
@@ -269,21 +419,37 @@
                         <img class="tab_page_map" src="./resources/images/main_zone/main_area_map2.png" alt="남부권 지도">
                     </li>
                     <li id="tab_page3" class="tab_page">
-                        <a class="tab_button" href="#tab_page3">북부권</a>
+                        <div class="tab_buttons">
+                            <a class="tab_button" href="#tab_page1">도심권</a>
+                            <a class="tab_button" href="#tab_page2">남부권</a>
+                            <a class="tab_button target" href="#tab_page3">북부권</a>
+                        </div>
                         <div class="tab_page_contents">
-                            <p class="tab_page_subtitle">"포항 도심에서 즐기는 <strong>여유롭게 편리한</strong> 여행"</p>
+                            <p class="tab_page_subtitle">"<strong>청정자연</strong> 속에서 누리는 힐링 여행"</p>
                             <div class="item_circle_group">
-                                <div class="item_circle_controller screen_pc_hide_controller">
-                                    <button type="button" class="arrow_board_prev"></button>
-                                    <button type="button" class="arrow_board_next"></button>
+                                <div class="item_circle_controller controller_position-middle screen_pc_hide_controller">
+                                    <button type="button" class="arrow_zone_circle_prev"></button>
+                                    <button type="button" class="arrow_zone_circle_next"></button>
                                 </div>
                                 <div class="item_circle">
-                                    <a class="slide1" href="#"><span class="blind">포항10미3 보러가기</span></a>
-                                    <a class="slide2" href="#"><span class="blind">체험 보러가기</span></a>
-                                    <a class="slide3" href="#"><span class="blind">쇼핑 보러가기</span></a>
-                                    <a class="slide4" href="#"><span class="blind">해수욕장 보러가기</span></a>
-                                    <a class="slide5" href="#"><span class="blind">맛집 보러가기</span></a>
-                                    <a class="slide6" href="#"><span class="blind">숙소 보러가기</span></a>
+                                    <a class="slide1" href="#">
+                                        <div class="icon">포항10미1</div>
+                                    </a>
+                                    <a class="slide2" href="#">
+                                        <div class="icon">체험</div>
+                                    </a>
+                                    <a class="slide3" href="#">
+                                        <div class="icon">쇼핑</div>
+                                    </a>
+                                    <a class="slide4" href="#">
+                                        <div class="icon">해수욕장</div>
+                                    </a>
+                                    <a class="slide5" href="#">
+                                        <div class="icon">맛집</div>
+                                    </a>
+                                    <a class="slide6" href="#">
+                                        <div class="icon">숙소</div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="course_1">
@@ -578,6 +744,9 @@
                     <div class="event_month_paging"></div>
                     <button type="button" class="arrow_board_next"></button>
                 </div>
+                <a class="board_more" href="#">
+                    <span class="blind">이달의 축제/문화 행사 더보기</span>
+                </a>
             </div>
             <div class="event_week_group">
                 <h3 class="banner_subtitle">이번주 행사</h3>
@@ -749,10 +918,7 @@
     </div>
 </main>
 
-<footer class="footer">
-
-    
-</footer>
+<footer class="footer"></footer>
 
 </body>
 </html>
