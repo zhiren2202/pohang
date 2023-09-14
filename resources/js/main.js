@@ -113,8 +113,7 @@ $(".imgbanner").slick({
   },
 });
 
-location.href = "#tab_page1";
-$(".item_circle").slick({
+$(".item_circle1").slick({
   slidesToShow: 6,
   infinite: false,
   arrows: false,
