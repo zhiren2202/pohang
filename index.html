@@ -384,14 +384,21 @@
     
     <div class="tab_page_wrapper">
             <h2 class="banner_title">권역별 즐겨퐝</h2>
+            <div class="tab_buttons">
+                <label for="tab_button1" class="tab_button">도심권</label>
+                <label for="tab_button2" class="tab_button">남부권</label>
+                <label for="tab_button3" class="tab_button">북부권</label>
+            </div>
             <div class="tab_page_section">
                 <ul>
                     <li id="tab_page1" class="tab_page">
-                        <div class="tab_buttons">
+                        <input type="radio" checked name="tabmenu" id="tab_button1" />
+                        <!-- <label for="tab_button1" class="tab_button">도심권</label> -->
+                        <!-- <div class="tab_buttons">
                             <a class="tab_button target" href="#tab_page1">도심권</a>
                             <a class="tab_button" href="#tab_page2">남부권</a>
                             <a class="tab_button" href="#tab_page3">북부권</a>
-                        </div>
+                        </div> -->
                         <div class="tab_page_contents">
                             <p class="tab_page_subtitle">"포항 도심에서 즐기는 <strong>여유롭게 편리한</strong> 여행"</p>
                             <div class="item_circle_group">
@@ -399,7 +406,7 @@
                                     <button type="button" class="arrow_zone_circle_prev"></button>
                                     <button type="button" class="arrow_zone_circle_next"></button>
                                 </div>
-                                <div class="item_circle">
+                                <div class="item_circle1">
                                     <a class="slide1" href="#">
                                         <div class="icon">포항10미1</div>
                                     </a>
@@ -466,11 +473,13 @@
                         <img class="tab_page_map" src="./resources/images/main_zone/main_area_map1.png" alt="도심권 지도">
                     </li>
                     <li id="tab_page2" class="tab_page">
-                        <div class="tab_buttons">
+                        <input type="radio" name="tabmenu" id="tab_button2" />
+                        <!-- <label for="tab_button2" class="tab_button">남부권</label> -->
+                        <!-- <div class="tab_buttons">
                             <a class="tab_button" href="#tab_page1">도심권</a>
                             <a class="tab_button target" href="#tab_page2">남부권</a>
                             <a class="tab_button" href="#tab_page3">북부권</a>
-                        </div>
+                        </div> -->
                         <div class="tab_page_contents">
                             <p class="tab_page_subtitle">"<strong>역사.문화</strong>의 숨결과 자연이 어우러지는 즐거운 여행"</p>
                             <div class="item_circle_group">
@@ -478,7 +487,7 @@
                                     <button type="button" class="arrow_zone_circle_prev"></button>
                                     <button type="button" class="arrow_zone_circle_next"></button>
                                 </div>
-                                <div class="item_circle">
+                                <div class="item_circle2">
                                     <a class="slide1" href="#">
                                         <div class="icon">포항10미1</div>
                                     </a>
@@ -545,11 +554,13 @@
                         <img class="tab_page_map" src="./resources/images/main_zone/main_area_map2.png" alt="남부권 지도">
                     </li>
                     <li id="tab_page3" class="tab_page">
-                        <div class="tab_buttons">
+                        <input type="radio" name="tabmenu" id="tab_button3" />
+                        <!-- <label for="tab_button3" class="tab_button">북부권</label> -->
+                        <!-- <div class="tab_buttons">
                             <a class="tab_button" href="#tab_page1">도심권</a>
                             <a class="tab_button" href="#tab_page2">남부권</a>
                             <a class="tab_button target" href="#tab_page3">북부권</a>
-                        </div>
+                        </div> -->
                         <div class="tab_page_contents">
                             <p class="tab_page_subtitle">"<strong>청정자연</strong> 속에서 누리는 힐링 여행"</p>
                             <div class="item_circle_group">
@@ -557,7 +568,7 @@
                                     <button type="button" class="arrow_zone_circle_prev"></button>
                                     <button type="button" class="arrow_zone_circle_next"></button>
                                 </div>
-                                <div class="item_circle">
+                                <div class="item_circle3">
                                     <a class="slide1" href="#">
                                         <div class="icon">포항10미1</div>
                                     </a>
