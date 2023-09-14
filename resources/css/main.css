@@ -1021,12 +1021,12 @@ button[class*=arrow_board_] {
 
 .tab_page_wrapper .tab_buttons {
   position: absolute;
-  top: 0;
+  top: 8em;
   left: 25em;
   z-index: 2;
 }
 
-.tab_page_wrapper .tab_buttons .tab_button {
+.tab_page_wrapper .tab_button {
   display: block;
   float: left;
   margin: 0 0.5em;
@@ -1037,16 +1037,12 @@ button[class*=arrow_board_] {
   font-size: 1.875em;
   font-weight: 500;
   color: #ffffff;
+  cursor: pointer;
 }
-
-.tab_page_wrapper .tab_buttons .tab_button:hover {
+.tab_page_wrapper .tab_button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* .tab_page_wrapper .tab_buttons .tab_button:target {
-  background-color: #f64492;
-  border: 1px solid #f64492;
-} */
 .tab_page_section {
   /* height: 50em; */
   overflow: hidden;
@@ -1061,31 +1057,12 @@ button[class*=arrow_board_] {
 }
 
 .tab_page_section ul .tab_page {
-  display: none;
   float: left;
   width: 100%;
 }
 
-.tab_page_section ul .tab_page:target {
-  display: block;
-}
-
-.tab_page_section ul .tab_page:target .tab_button.target {
-  background-color: #f64492;
-  border: 1px solid #f64492;
-}
-
-.tab_page_section ul .tab_page .tab_button,
-.tab_page_section ul .tab_buttons .tab_button {
-  padding: 0.625em 0;
-  margin: 0 0.5em;
-  padding: 0.4em 1em;
-  border: 1px solid #ffffff;
-  border-radius: 0.2em;
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: 1.875em;
-  font-weight: 500;
-  color: #ffffff;
+.tab_page_section ul .tab_page input {
+  display: none;
 }
 
 .tab_page_section ul .tab_page .tab_page_contents {
@@ -1095,8 +1072,17 @@ button[class*=arrow_board_] {
   float: left;
 }
 
-.tab_page_section ul .tab_page:target .tab_page_contents,
-.tab_page_section ul .tab_page:target .tab_page_map {
+.tab_page_section ul .tab_page .tab_page_contents {
+  display: none;
+}
+
+.tab_page input:checked ~ label.tab_button {
+  background-color: #f64492;
+  border: 1px solid #f64492;
+}
+
+.tab_page input:checked ~ .tab_page_contents,
+.tab_page input:checked ~ .tab_page_map {
   display: block;
 }
 
@@ -1130,15 +1116,15 @@ button[class*=arrow_board_] {
   right: -3em;
 }
 
-.item_circle .slick-list {
+[class*=item_circle] .slick-list {
   margin: 0 -1em;
 }
 
-.item_circle .slick-slide {
+[class*=item_circle] .slick-slide {
   margin: 0 1em;
 }
 
-.item_circle a[class*=slide] {
+[class*=item_circle] a[class*=slide] {
   position: relative;
   padding-bottom: 100%;
   overflow: hidden;
@@ -1152,11 +1138,11 @@ button[class*=arrow_board_] {
   text-align: center;
 }
 
-.item_circle [class*=slide]:hover {
+[class*=item_circle] [class*=slide]:hover {
   color: #288ed7;
 }
 
-.item_circle [class*=slide] .icon {
+[class*=item_circle] [class*=slide] .icon {
   position: absolute;
   top: 0;
   left: 50%;
@@ -1169,27 +1155,27 @@ button[class*=arrow_board_] {
   background-size: 550%;
 }
 
-.item_circle .slide1 .icon {
+[class*=item_circle] .slide1 .icon {
   background-position: 0.2em 1em;
 }
 
-.item_circle .slide2 .icon {
+[class*=item_circle] .slide2 .icon {
   background-position: -4.5em 0.8em;
 }
 
-.item_circle .slide3 .icon {
+[class*=item_circle] .slide3 .icon {
   background-position: -9.1em 0.8em;
 }
 
-.item_circle .slide4 .icon {
+[class*=item_circle] .slide4 .icon {
   background-position: -13.5em 0.8em;
 }
 
-.item_circle .slide5 .icon {
+[class*=item_circle] .slide5 .icon {
   background-position: -18.2em 0.8em;
 }
 
-.item_circle .slide6 .icon {
+[class*=item_circle] .slide6 .icon {
   background-position: -22.7em 0.8em;
 }
 
@@ -1654,4 +1640,4 @@ button[class*=arrow_board_] {
   .footer .footer_bottom .footer_service {
     width: 100%;
   }
-}
+}/*# sourceMappingURL=main.css.map */
