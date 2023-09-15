@@ -98,10 +98,12 @@ $(".quickmenu").slick({
 });
 
 $(".imgbanner").slick({
+  fade: true,
+  speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 2000,
   arrows: true,
   prevArrow: ".imgbanner_controller .arrow_board_prev",
@@ -178,10 +180,12 @@ $(".event_month").slick({
   },
 });
 $(".event_week").slick({
+  fade: true,
   slidesToShow: 1,
-  slidesToScroll: 1,
+  // slidesToScroll: 1,
   infinite: true,
-  autoplay: false,
+  // autoplay: true,
+  speed: 1000,
   arrows: true,
   prevArrow: ".event_week_controller .arrow_board_prev",
   nextArrow: ".event_week_controller .arrow_board_next",
@@ -191,7 +195,7 @@ $(".event_week").slick({
     return i + 1 + "/" + slider.slideCount;
   },
 });
-$(".imgslide").slick({
+$(".popupzone").slick({
   fade: true,
   slidesToShow: 1,
   draggable: false,
@@ -201,10 +205,10 @@ $(".imgslide").slick({
   // autoplay: true,
   autoplaySpeed: 2000,
   arrows: true,
-  prevArrow: ".imgslide_controller .arrow_board_prev",
-  nextArrow: ".imgslide_controller .arrow_board_next",
+  prevArrow: ".popupzone_controller .arrow_board_prev",
+  nextArrow: ".popupzone_controller .arrow_board_next",
   dots: true,
-  appendDots: ".imgslide_paging",
+  appendDots: ".popupzone_paging",
   customPaging: function (slider, i) {
     return "<span>" + (i + 1) + "</span>" + "/" + slider.slideCount;
   },
@@ -230,4 +234,25 @@ $(".arrow_board_pause").click(function () {
   $(".link_banner").slick("slickPause");
   $(".arrow_board_pause").removeClass("on");
   $(".arrow_board_play").addClass("on");
+});
+
+
+const siteBtn = document.querySelector('.site_btn-new');
+const options = document.querySelectorAll('.site_item-new');
+// 클릭한 옵션의 텍스트를 라벨 안에 넣음
+const handleSelect = function(item) {
+  siteBtn.innerHTML = item.textContent;
+  siteBtn.parentNode.classList.remove('active');
+}
+// 옵션 클릭시 클릭한 옵션을 넘김
+options.forEach(function(option){
+  option.addEventListener('click', function(){handleSelect(option)})
+})
+// 라벨을 클릭시 옵션 목록이 열림/닫힘
+siteBtn.addEventListener('click', function(){
+  if(siteBtn.parentNode.classList.contains('active')) {
+    siteBtn.parentNode.classList.remove('active');
+  } else {
+    siteBtn.parentNode.classList.add('active');
+  }
 });
