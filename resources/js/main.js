@@ -1,9 +1,11 @@
+// 헤더 스크롤
 window.addEventListener("wheel", (e) => {
   const header = document.querySelector(".header");
   const yOffset = window.scrollY || document.documentElement.scrollTop;
   yOffset > 0 ? header.classList.add("scroll") : header.classList.remove("scroll");
 });
 
+// 팝업창
 $(".popup_image").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -19,6 +21,7 @@ closeBtn.onclick = function () {
   popup.style.display = "none";
 };
 
+// 메인 비주얼
 $(".main_visual").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -45,6 +48,7 @@ $(".main_visual_pause").click(function () {
   $(".main_visual_play").addClass("on");
 });
 
+// 메인 퀵메뉴
 $(".quickmenu").slick({
   slidesToShow: 10,
   infinite: false,
@@ -97,24 +101,25 @@ $(".quickmenu").slick({
   ],
 });
 
-$(".imgbanner").slick({
-  fade: true,
-  speed: 2000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  autoplay: false,
-  autoplaySpeed: 2000,
-  arrows: true,
-  prevArrow: ".imgbanner_controller .arrow_board_prev",
-  nextArrow: ".imgbanner_controller .arrow_board_next",
-  dots: true,
-  appendDots: ".imgbanner_paging",
-  customPaging: function (slider, i) {
-    return "<span>" + (i + 1) + "</span>" + "/" + slider.slideCount;
-  },
-});
+// BEST 퐝퐝
+const tabList = document.querySelectorAll('.tab_best_section .tab_best_button-new');
+const contents = document.querySelectorAll('.tab_best_section .tab_best_contents-new')
+let activeCont = '';
+for(var i = 0; i < tabList.length; i++){
+  tabList[i].querySelector('.tab_best_button-new > a').addEventListener('click', function(e){
+    e.preventDefault();
+    for(var j = 0; j < tabList.length; j++){
+      tabList[j].classList.remove('active');
+      contents[j].style.display = 'none';
+    }
+    this.parentNode.classList.add('active');
+    activeCont = this.getAttribute('href');
+    document.querySelector(activeCont).style.display = 'block';
+  });
+}
 
+
+// 권역별 즐겨퐝
 $(".item_circle1").slick({
   slidesToShow: 6,
   infinite: false,
@@ -164,6 +169,26 @@ $(".item_circle3").slick({
   ],
 });
 
+// TV에 나온 퐝
+$(".imgbanner").slick({
+  fade: true,
+  speed: 2000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: true,
+  autoplay: false,
+  autoplaySpeed: 2000,
+  arrows: true,
+  prevArrow: ".imgbanner_controller .arrow_board_prev",
+  nextArrow: ".imgbanner_controller .arrow_board_next",
+  dots: true,
+  appendDots: ".imgbanner_paging",
+  customPaging: function (slider, i) {
+    return "<span>" + (i + 1) + "</span>" + "/" + slider.slideCount;
+  },
+});
+
+// 이달의 축제/문화 행사
 $(".event_month").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -195,6 +220,8 @@ $(".event_week").slick({
     return i + 1 + "/" + slider.slideCount;
   },
 });
+
+// 팝업존
 $(".popupzone").slick({
   fade: true,
   slidesToShow: 1,
@@ -213,6 +240,8 @@ $(".popupzone").slick({
     return "<span>" + (i + 1) + "</span>" + "/" + slider.slideCount;
   },
 });
+
+// 배너모음
 $(".link_banner").slick({
   slidesToShow: 8,
   slidesToScroll: 1,
@@ -224,7 +253,6 @@ $(".link_banner").slick({
   prevArrow: ".link_banner_controller .arrow_board_prev",
   nextArrow: ".link_banner_controller .arrow_board_next",
 });
-
 $(".arrow_board_play").click(function () {
   $(".link_banner").slick("slickPlay");
   $(".arrow_board_play").removeClass("on");
@@ -236,23 +264,19 @@ $(".arrow_board_pause").click(function () {
   $(".arrow_board_play").addClass("on");
 });
 
-
-const siteBtn = document.querySelector('.site_btn-new');
-const options = document.querySelectorAll('.site_item-new');
-// 클릭한 옵션의 텍스트를 라벨 안에 넣음
-const handleSelect = function(item) {
-  siteBtn.innerHTML = item.textContent;
-  siteBtn.parentNode.classList.remove('active');
-}
-// 옵션 클릭시 클릭한 옵션을 넘김
-options.forEach(function(option){
-  option.addEventListener('click', function(){handleSelect(option)})
-})
-// 라벨을 클릭시 옵션 목록이 열림/닫힘
-siteBtn.addEventListener('click', function(){
-  if(siteBtn.parentNode.classList.contains('active')) {
-    siteBtn.parentNode.classList.remove('active');
-  } else {
-    siteBtn.parentNode.classList.add('active');
-  }
+// 푸터 관련기관,패밀리사이트 셀렉트박스 구현
+const selectBtn = document.querySelectorAll('.footer_top_select .select_btn');
+selectBtn.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let selectItem = optionList.querySelectorAll('.footer_top_select .select_item');
+        clickLabel(lb, selectItem);
+    })
 });
+const clickLabel = (lb, selectItem) => {
+    if(lb.parentNode.classList.contains('active')) {
+        lb.parentNode.classList.remove('active');
+    } else {
+        lb.parentNode.classList.add('active');
+    }
+}
