@@ -34,7 +34,7 @@
         url("../fonts/SCDream/SCDreamBold.otf") format("opentype");
 }
 
-@media screen and (max-width: 1620px) {
+/* @media screen and (max-width: 1620px) {
     body  {
         font-size: 14px;
     }
@@ -43,32 +43,19 @@
     body  {
         font-size: 12px;
     }
-}
+} */
 
 
 @media screen and (max-width: 1280px) {
     body {
-        font-size: 11px;
+        font-size: 14px;
     }
 }
-/* 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
     body  {
-        font-size: 15px;
-    }
-} */
-
-@media screen and (max-width: 650px) {
-    body  {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
-
-/* @media screen and (max-width: 320px) {
-    body  {
-        font-size: 10px;
-    }
-} */
 
 body {
     --pink: #dd2676;
