@@ -21,6 +21,39 @@ closeBtn.onclick = function () {
   popup.style.display = "none";
 };
 
+// 모바일메뉴
+document.querySelector(".header_btn_mobile_menu").addEventListener("click", function(e){
+  if ( document.querySelector('.mobile_menu').classList.contains('open') ){
+      document.querySelector('.mobile_menu').classList.remove('open');
+  } else {
+      document.querySelector('.mobile_menu').classList.add('open');
+  }
+});
+document.querySelector(".btn_mobile_menu_close").addEventListener("click", function(e){
+  if ( document.querySelector('.mobile_menu').classList.contains('open') ){
+      document.querySelector('.mobile_menu').classList.remove('open');
+  } else {
+      document.querySelector('.mobile_menu').classList.add('open');
+  }
+});
+
+// 모바일 탭메뉴
+const tabListMobile = document.querySelectorAll('.mobile_menu_list .mobile_tabmenu');
+const contentsMobile = document.querySelectorAll('.mobile_menu_contents')
+let activeContMobile = '';
+for(var i = 0; i < tabListMobile.length; i++){
+  tabListMobile[i].querySelector('.mobile_tabmenu > a').addEventListener('click', function(e){
+    e.preventDefault();
+    for(var j = 0; j < tabListMobile.length; j++){
+      tabListMobile[j].classList.remove('active');
+      contentsMobile[j].style.display = 'none';
+    }
+    this.parentNode.classList.add('active');
+    activeContMobile = this.getAttribute('href');
+    document.querySelector(activeContMobile).style.display = 'block';
+  });
+}
+
 // 메인 비주얼
 $(".main_visual").slick({
   slidesToShow: 1,
@@ -77,20 +110,6 @@ $(".quickmenu").slick({
         arrows: true,
       },
     },
-    // {
-    //   breakpoint: 800,
-    //   settings: {
-    //     slidesToShow: 3,
-    //     arrows: true,
-    //   },
-    // },
-    // {
-    //   breakpoint: 600,
-    //   settings: {
-    //     slidesToShow: 1,
-    //     arrows: true,
-    //   },
-    // },
   ],
 });
 
