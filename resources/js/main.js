@@ -57,56 +57,49 @@ $(".quickmenu").slick({
   nextArrow: ".quickmenu_controller .arrow_board_next",
   responsive: [
     {
-      breakpoint: 1750,
+      breakpoint: 1281,
       settings: {
         slidesToShow: 7,
         arrows: true,
       },
     },
     {
-      breakpoint: 1300,
-      settings: {
-        slidesToShow: 6,
-        arrows: true,
-      },
-    },
-    {
-      breakpoint: 1200,
+      breakpoint: 769,
       settings: {
         slidesToShow: 5,
         arrows: true,
       },
     },
     {
-      breakpoint: 960,
-      settings: {
-        slidesToShow: 4,
-        arrows: true,
-      },
-    },
-    {
-      breakpoint: 800,
+      breakpoint: 415,
       settings: {
         slidesToShow: 3,
         arrows: true,
       },
     },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        arrows: true,
-      },
-    },
+    // {
+    //   breakpoint: 800,
+    //   settings: {
+    //     slidesToShow: 3,
+    //     arrows: true,
+    //   },
+    // },
+    // {
+    //   breakpoint: 600,
+    //   settings: {
+    //     slidesToShow: 1,
+    //     arrows: true,
+    //   },
+    // },
   ],
 });
 
 // BEST 퐝퐝
-const tabList = document.querySelectorAll('.tab_best_section .tab_best_button-new');
-const contents = document.querySelectorAll('.tab_best_section .tab_best_contents-new')
+const tabList = document.querySelectorAll('.tab_best_section .tab_best_button');
+const contents = document.querySelectorAll('.tab_best_section .tab_best_contents')
 let activeCont = '';
 for(var i = 0; i < tabList.length; i++){
-  tabList[i].querySelector('.tab_best_button-new > a').addEventListener('click', function(e){
+  tabList[i].querySelector('.tab_best_button > a').addEventListener('click', function(e){
     e.preventDefault();
     for(var j = 0; j < tabList.length; j++){
       tabList[j].classList.remove('active');
@@ -120,6 +113,32 @@ for(var i = 0; i < tabList.length; i++){
 
 
 // 권역별 즐겨퐝
+const tabListArea = document.querySelectorAll('.tab_area_section .tab_area_button');
+const contentsArea = document.querySelectorAll('.tab_area_section .tab_area_contents');
+const tabListCourse = document.querySelectorAll('.tab_area_course .course');
+let activeContArea = '';
+for(var i = 0; i < tabListArea.length; i++){
+  tabListArea[i].querySelector('.tab_area_button > a').addEventListener('click', function(e){
+    e.preventDefault();
+    for(var j = 0; j < tabListArea.length; j++){
+      tabListArea[j].classList.remove('active');
+      contentsArea[j].style.display = 'none';
+    }
+    this.parentNode.classList.add('active');
+    activeContArea = this.getAttribute('href');
+    document.querySelector(activeContArea).style.display = 'block';
+  });
+}
+for(var i = 0; i < tabListCourse.length; i++){
+  tabListCourse[i].querySelector('.course_button').addEventListener('click', function(e){
+    e.preventDefault();
+    for(var j = 0; j < tabListCourse.length; j++){
+      tabListCourse[j].classList.remove('active');
+    }
+    this.parentNode.classList.add('active');
+  });
+}
+
 $(".item_circle1").slick({
   slidesToShow: 6,
   infinite: false,
@@ -198,6 +217,29 @@ $(".event_month").slick({
   arrows: true,
   prevArrow: ".event_month_controller .arrow_board_prev",
   nextArrow: ".event_month_controller .arrow_board_next",
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+        arrows: true,
+      },
+    },
+    {
+      breakpoint: 821,
+      settings: {
+        slidesToShow: 3,
+        arrows: true,
+      },
+    },
+    {
+      breakpoint: 641,
+      settings: {
+        slidesToShow: 2,
+        arrows: true,
+      },
+    }
+  ],
   dots: true,
   appendDots: ".event_month_paging",
   customPaging: function (slider, i) {
