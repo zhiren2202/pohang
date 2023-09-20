@@ -34,17 +34,6 @@
         url("../fonts/SCDream/SCDreamBold.otf") format("opentype");
 }
 
-/* @media screen and (max-width: 1620px) {
-    body  {
-        font-size: 14px;
-    }
-}
-@media screen and (max-width: 1420px) {
-    body  {
-        font-size: 12px;
-    }
-} */
-
 
 @media screen and (max-width: 1280px) {
     body {
