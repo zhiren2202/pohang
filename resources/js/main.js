@@ -162,30 +162,48 @@ $(".item_circle1").slick({
   slidesToShow: 6,
   infinite: false,
   arrows: false,
-  prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-  nextArrow: ".item_circle_controller .arrow_zone_circle_next",
   responsive: [
     {
-      breakpoint: 1000,
+      breakpoint: 641,
       settings: {
         slidesToShow: 5,
         arrows: true,
-      },
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 4,
+        arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
+    },
+    {
+      breakpoint: 361,
+      settings: {
+        slidesToShow: 3,
+        arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
     }
   ],
 });
 $(".item_circle2").slick({
   slidesToShow: 6,
   infinite: false,
-  arrows: true,
-  prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-  nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+  arrows: false,
   responsive: [
     {
-      breakpoint: 1000,
+      breakpoint: 641,
       settings: {
         slidesToShow: 5,
         arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       },
     }
   ],
@@ -194,14 +212,14 @@ $(".item_circle3").slick({
   slidesToShow: 6,
   infinite: false,
   arrows: false,
-  prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-  nextArrow: ".item_circle_controller .arrow_zone_circle_next",
   responsive: [
     {
-      breakpoint: 1000,
+      breakpoint: 641,
       settings: {
         slidesToShow: 5,
         arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       },
     }
   ],
