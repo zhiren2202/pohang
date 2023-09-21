@@ -5,22 +5,6 @@ window.addEventListener("wheel", (e) => {
   yOffset > 0 ? header.classList.add("scroll") : header.classList.remove("scroll");
 });
 
-// 팝업창
-$(".popup_image").slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false,
-  dots: true,
-});
-
-const closeBtn = document.getElementById("close_btn");
-const popup = document.getElementById("popup_wrap");
-closeBtn.onclick = function () {
-  popup.style.display = "none";
-};
-
 // 모바일메뉴
 document.querySelector(".header_btn_mobile_menu").addEventListener("click", function(e){
   if ( document.querySelector('.mobile_menu').classList.contains('open') ){
@@ -163,6 +147,12 @@ $(".item_circle1").slick({
   infinite: false,
   arrows: false,
   responsive: [
+    {
+      breakpoint: 1025,
+      settings : {
+        variableWidth: true,
+      }
+    },
     {
       breakpoint: 641,
       settings: {
