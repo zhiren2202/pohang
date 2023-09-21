@@ -12,24 +12,37 @@
     <script src="./resources/js/jquery-3.7.1.min.js" defer></script>
     <script src="./resources/js/slick.js" defer></script>
     <script src="./resources/js/main.js" defer></script>
+    <script src="./resources/js/popup.js" defer></script>
 </head>
 <body>
 
 <div id="popup_wrap" class="popup_wrap">
     <div class="popup_image">
-        <img src="./resources/images/popup/202211161716_RZ5oc42.jpg" alt="pohang TV 포항시 생생하고 다양한 포항 소식!">
-        <img src="./resources/images/popup/202211231939_dtLAYlV.jpg" alt="POHANG HIPHOP 포항힙합">
-        <img src="./resources/images/popup/202303281057_j2LZfkf.jpg" alt="피어라! 미항 구룡포">
-        <img src="./resources/images/popup/202308291454_vcrqxqJ.jpeg" alt="칠포 재즈 페스티벌
+        <a href="#" target="_blank" title="새창열기">
+            <img src="./resources/images/popup/202211161716_RZ5oc42.jpg" alt="pohang TV 포항시 생생하고 다양한 포항 소식!">
+        </a>
+        <a href="#" target="_blank" title="새창열기">
+            <img src="./resources/images/popup/202211231939_dtLAYlV.jpg" alt="POHANG HIPHOP 포항힙합">
+        </a>
+        <a href="#" target="_blank" title="새창열기">
+            <img src="./resources/images/popup/202303281057_j2LZfkf.jpg" alt="피어라! 미항 구룡포">
+        </a>
+        <a href="#" target="_blank" title="새창열기">
+            <img src="./resources/images/popup/202308291454_vcrqxqJ.jpeg" alt="칠포 재즈 페스티벌
             2023 CHILPO JAZZ FESTIVAL
             9/23 SAT 9/24 SUN 칠포해수욕장 상설무대">
-        <img src="./resources/images/popup/202308301550_PulaLDl.png" alt="음악과 캠핑이 있는 힐링의 도시, 포항 
+        </a>
+        <a href="#" target="_blank" title="새창열기">
+            <img src="./resources/images/popup/202308301550_PulaLDl.png" alt="음악과 캠핑이 있는 힐링의 도시, 포항 
             2023 MUSIC&CAMPING Festa 포항 영일대 
             2023 09.16 Sat. ~ 09.17 Sun. 2일간 
             포항 영일대 해수욕장 일원">
-        <img src="./resources/images/popup/202309081302_Bha5eka.png" alt="포항 관광택시 요금 조정 안내
+        </a>
+        <a href="#" target="_blank" title="새창열기">
+            <img src="./resources/images/popup/202309081302_Bha5eka.png" alt="포항 관광택시 요금 조정 안내
             포항 오면 꼭 타고 싶은 포항 명품 관광택시
             포항 관광택시">
+        </a>
     </div>
     <div class="popup_bottom">
         <input class="popup_checkbox" type="checkbox" />
@@ -187,7 +200,8 @@
             <button type="button" class="main_visual_play"></button>
             <button type="button" class="main_visual_pause on"></button>
         </div>
-        <section class="main_visual_bottom">
+        <a class="main_visual_scroll" href="#main_visual_bottom"></a>
+        <section id="main_visual_bottom" class="main_visual_bottom">
             <div class="main_visual_banner">
                 <a class="main_visual_banner__1" href="#">
                     <img src="./resources/images/main_title_webzine.png" alt="퐝매거진">
@@ -196,9 +210,9 @@
                 <a class="main_visual_banner__2" href="#">
                     <img src="./resources/images/main_title_trip.png" alt="퐝여행 레시피">
                     <p class="main_visual_banner_subtitle">뚝딱뚝딱 만드는 여행</p>
-                </a>
+                </a>0
             </div>
-            <div class="main_visual_searchbar">
+            <form class="main_visual_searchbar">
                 <select class="searchbar_selectbox first" name="" id="">
                     <option value="">누구와 함께 여행하세요?</option>
                     <option value="가족">가족</option>
@@ -216,7 +230,7 @@
                     <option value="">쇼핑/전통시장 투어</option>
                 </select>
                 <button class="searchbar_confirm" type="submit">맞춤코스확인</button>
-            </div>
+            </form>
         </section>
     </div>
 
@@ -462,23 +476,29 @@
                                 <button type="button" class="arrow_zone_circle_next"></button>
                             </div>
                             <div class="item_circle1">
-                                <a class="slide1" href="#">
-                                    <div class="icon">포항10미1</div>
+                                <a class="item_circle_slide1" href="#">
+                                    <div class="icon"></div>
+                                    <p>포항10미1</p>
                                 </a>
-                                <a class="slide2" href="#">
-                                    <div class="icon">체험</div>
+                                <a class="item_circle_slide2" href="#">
+                                    <div class="icon"></div>
+                                    <p>체험</p>
                                 </a>
-                                <a class="slide3" href="#">
-                                    <div class="icon">쇼핑</div>
+                                <a class="item_circle_slide3" href="#">
+                                    <div class="icon"></div>
+                                    <p>쇼핑</p> 
                                 </a>
-                                <a class="slide4" href="#">
-                                    <div class="icon">해수욕장</div>
+                                <a class="item_circle_slide4" href="#">
+                                    <div class="icon"></div>
+                                    <p>해수욕장</p>
                                 </a>
-                                <a class="slide5" href="#">
-                                    <div class="icon">맛집</div>
+                                <a class="item_circle_slide5" href="#">
+                                    <div class="icon"></div>
+                                    <p>맛집</p>
                                 </a>
-                                <a class="slide6" href="#">
-                                    <div class="icon">숙소</div>
+                                <a class="item_circle_slide6" href="#">
+                                    <div class="icon"></div>
+                                    <p>숙소</p>
                                 </a>
                             </div>
                         </div>
