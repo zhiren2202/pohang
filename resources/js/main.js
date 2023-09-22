@@ -146,6 +146,7 @@ $(".item_circle1").slick({
   slidesToShow: 6,
   infinite: false,
   arrows: false,
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 1025,
@@ -157,6 +158,7 @@ $(".item_circle1").slick({
       breakpoint: 641,
       settings: {
         slidesToShow: 5,
+        variableWidth: true,
         arrows: true,
         prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
         nextArrow: ".item_circle_controller .arrow_zone_circle_next",
@@ -166,6 +168,7 @@ $(".item_circle1").slick({
       breakpoint: 481,
       settings: {
         slidesToShow: 4,
+        variableWidth: true,
         arrows: true,
         prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
         nextArrow: ".item_circle_controller .arrow_zone_circle_next",
@@ -175,6 +178,7 @@ $(".item_circle1").slick({
       breakpoint: 361,
       settings: {
         slidesToShow: 3,
+        variableWidth: true,
         arrows: true,
         prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
         nextArrow: ".item_circle_controller .arrow_zone_circle_next",
@@ -186,15 +190,53 @@ $(".item_circle2").slick({
   slidesToShow: 6,
   infinite: false,
   arrows: false,
+  variableWidth: true,
   responsive: [
+    {
+      breakpoint: 1025,
+      settings : {
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 5,
+        variableWidth: false,
+        arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
+    },
     {
       breakpoint: 641,
       settings: {
         slidesToShow: 5,
+        variableWidth: false,
         arrows: true,
         prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
         nextArrow: ".item_circle_controller .arrow_zone_circle_next",
-      },
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 4,
+        variableWidth: false,
+        arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
+    },
+    {
+      breakpoint: 361,
+      settings: {
+        slidesToShow: 3,
+        variableWidth: false,
+        arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
     }
   ],
 });
@@ -202,15 +244,43 @@ $(".item_circle3").slick({
   slidesToShow: 6,
   infinite: false,
   arrows: false,
+  variableWidth: true,
   responsive: [
+    {
+      breakpoint: 1025,
+      settings : {
+        variableWidth: true,
+      }
+    },
     {
       breakpoint: 641,
       settings: {
         slidesToShow: 5,
+        variableWidth: true,
         arrows: true,
         prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
         nextArrow: ".item_circle_controller .arrow_zone_circle_next",
-      },
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 4,
+        variableWidth: true,
+        arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
+    },
+    {
+      breakpoint: 361,
+      settings: {
+        slidesToShow: 3,
+        variableWidth: true,
+        arrows: true,
+        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
+        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
+      }
     }
   ],
 });
@@ -218,7 +288,7 @@ $(".item_circle3").slick({
 // TV에 나온 퐝
 $(".imgbanner").slick({
   fade: true,
-  speed: 2000,
+  speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,
   infinite: true,
@@ -339,12 +409,12 @@ selectBtn.forEach(function(lb){
     lb.addEventListener('click', e => {
         let optionList = lb.nextElementSibling;
         let selectItem = optionList.querySelectorAll('.footer_top_select .select_item');
-        clickLabel(lb, selectItem);
+        clickLabel(lb);
     })
 });
-const clickLabel = (lb, selectItem) => {
+const clickLabel = (lb) => {
     if(lb.parentNode.classList.contains('active')) {
-        lb.parentNode.classList.remove('active');
+        lb.parentNode.classList.remove('active'); 
     } else {
         lb.parentNode.classList.add('active');
     }
