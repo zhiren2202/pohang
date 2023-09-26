@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./resources/css/slick.css">
     <link rel="stylesheet" href="./resources/css/slick-theme.css">
     <link rel="stylesheet" href="./resources/css/reset.css">
-    <link rel="stylesheet" href="./resources/css/common.css">
     <link rel="stylesheet" href="./resources/css/main.css">
     <script src="./resources/js/jquery-3.7.1.min.js" defer></script>
     <script src="./resources/js/slick.js" defer></script>
@@ -70,7 +69,7 @@
         <button class="header_btn_mobile_menu" type="button"></button>
         <a class="header_btn_sitemap" href="#"></a>
     </div>
-    <div class="mobile_menu open">
+    <div class="mobile_menu">
         <div class="mobile_menu_top">
             <img src="./resources/images/header_logo_character_fixed.png" alt="pohang 포항시 퐝퐝여행">
             <button class="btn_mobile_menu_close"></button>
@@ -147,9 +146,39 @@
     <div class="mobile_menu_shadow"></div>
 </header>
 
+<aside class="aside">
+    <a class="aside_weather" href="#">
+        <div class="aside_weather_top">
+            <div class="aside_weather_img">
+                <span class="blind">약간 흐림</span>
+            </div>
+            23℃
+        </div>
+        <div class="aside_weather_body">
+            미세먼지
+            <div class="aside_dust_img">
+                <span class="blind">좋음</span>
+            </div>
+        </div>
+    </a>
+    <div class="aside_menu">
+        <a class="aside_menu_item active" title="선택됨" href="#tab_best">Best</a>
+        <a class="aside_menu_item" href="#tab_area">권역</a>
+        <a class="aside_menu_item" href="#imgbanner">추천</a>
+        <a class="aside_menu_item" href="#event">축제</a>
+    </div>
+    <a class="aside_kakao" target="_blank" title="새창열기" href="#"></a>
+    <div class="aside_sns">
+        <a class="aside_sns_f" href="#"></a>
+        <a class="aside_sns_i" href="#"></a>
+        <a class="aside_sns_b" href="#"></a>
+        <a class="aside_sns_y" href="#"></a>
+    </div>
+</aside>
+
 <main class="container">
 
-    <div class="main_visual_wrapper">
+    <section class="main_visual_wrapper">
         <div class="main_visual">
             <div class="slide1">
                 <div class="main_visual_contents">
@@ -233,10 +262,9 @@
                 <button class="searchbar_confirm" type="submit">맞춤코스확인</button>
             </form>
         </section>
-    </div>
+    </section>
 
-    
-    <div class="quickmenu_section">
+    <section class="quickmenu_section">
         <div class="quickmenu_controller controller_position-middle">
             <button type="button" class="arrow_board_prev"></button>
             <button type="button" class="arrow_board_next"></button>
@@ -283,9 +311,9 @@
                 <span class="quickmenu_title blank" href="#">교통정보센터</span>
             </a>
         </div>
-    </div>
+    </section>
 
-    <div class="tab_best_section">
+    <section id="tab_best" class="tab_best_section">
         <h2 class="banner_title"><strong>BEST</strong> 퐝퐝</h2>
 
         <ul class="tab_best_button_list">
@@ -455,9 +483,9 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
     
-    <div class="tab_area_wrapper">
+    <section id="tab_area" class="tab_area_wrapper">
         <div class="tab_area_section">
             <h2 class="banner_title">권역별 즐겨퐝</h2>
 
@@ -472,10 +500,6 @@
                     <div class="tab_page_contents">
                         <p class="tab_page_subtitle">"포항 도심에서 즐기는 <strong>여유롭게 편리한</strong> 여행"</p>
                         <div class="item_circle_group">
-                            <div class="item_circle_controller controller_position-middle">
-                                <button type="button" class="arrow_zone_circle_prev"></button>
-                                <button type="button" class="arrow_zone_circle_next"></button>
-                            </div>
                             <div class="item_circle1">
                                 <a class="item_circle_slide1" href="#">포항10미1</a>
                                 <a class="item_circle_slide2" href="#">체험</a>
@@ -486,7 +510,7 @@
                             </div>
                         </div>
                         <ul class="tab_area_course">
-                            <li class="course active">
+                            <li class="course active" title="선택됨">
                                 <a href="#course_contents1" class="course_button">1코스</a>
                                 <div id="course_contents1" class="course_contents">
                                     <span>영일대해수욕장</span>
@@ -530,10 +554,6 @@
                     <div class="tab_page_contents">
                         <p class="tab_page_subtitle">"<strong>역사.문화</strong>의 숨결과 자연이 어우러지는 즐거운 여행"</p>
                         <div class="item_circle_group">
-                            <div class="item_circle_controller controller_position-middle">
-                                <button type="button" class="arrow_zone_circle_prev"></button>
-                                <button type="button" class="arrow_zone_circle_next"></button>
-                            </div>
                             <div class="item_circle2">
                                 <a class="item_circle_slide1" href="#">포항10미2</a>
                                 <a class="item_circle_slide2" href="#">체험</a>
@@ -589,10 +609,6 @@
                     <div class="tab_page_contents">
                         <p class="tab_page_subtitle">"<strong>청정자연</strong> 속에서 누리는 힐링 여행"</p>
                         <div class="item_circle_group">
-                            <div class="item_circle_controller controller_position-middle">
-                                <button type="button" class="arrow_zone_circle_prev"></button>
-                                <button type="button" class="arrow_zone_circle_next"></button>
-                            </div>
                             <div class="item_circle3">
                                 <a class="item_circle_slide1" href="#">포항10미3</a>
                                 <a class="item_circle_slide2" href="#">체험</a>
@@ -645,9 +661,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="imgbanner_section">
+    <section id="imgbanner" class="imgbanner_section">
         <div class="imgbanner_group">
             <div class="imgbanner">
                 <div class="slide1">
@@ -832,9 +848,9 @@
                 <button type="button" class="arrow_board_next"></button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="event_wrapper">
+    <section id="event" class="event_wrapper">
         <div class="event_section">
     
             <div class="event_month_group">
@@ -1010,23 +1026,23 @@
                 <a class="board_more" href="#"><span class="blind">공지사항 더보기</span></a>
                 <ul>
                     <li class="board_row">
-                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <a class="board_title" href="#"><2023 포항음악제 - 신세계?신세계!> 티켓오픈 안내</a>
+                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <div class="board_file"></div>
                     </li>
                     <li class="board_row">
-                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <a class="board_title" href="#">9월 포항시민교양대학 「남경주와 함께하는 뮤지컬여행」 안내</a>
+                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <div class="board_file"></div>
                     </li>
                     <li class="board_row">
-                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <a class="board_title" href="#">포항시립미술관 휴관 & 9월 미술관 음악회 미개최 안내</a>
+                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <div class="board_file"></div>
                     </li>
                     <li class="board_row">
-                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <a class="board_title" href="#">POSTECH 제9대 김성근 총장 취임기념 금난새&뉴월드 필하모닉 오케스트라 초청 음악회</a>
+                        <div class="board_date"><strong>08<br/></strong>2023.09</div>
                         <div class="board_file"></div>
                     </li>
                 </ul>
@@ -1045,9 +1061,9 @@
             </div>
 
         </div>
-    </div>
+    </section>
     
-    <div class="link_banner_wrapper">
+    <section class="link_banner_wrapper">
         <div class="link_banner_section">
             <div class="link_banner">
                 <span class="slide"><a href="#" target="_blank" title="새창열기">포항시</a></span>
@@ -1070,7 +1086,7 @@
                 <button type="button" class="arrow_board_pause on"></button>
             </div>
         </div>
-    </div>
+    </section>
 </main>
 
 <footer class="footer">
