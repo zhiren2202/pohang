@@ -38,6 +38,19 @@ for(var i = 0; i < tabListMobile.length; i++){
   });
 }
 
+// aside menu
+const asideMenuItem = document.querySelectorAll('.aside_menu_item');
+for(var i = 0; i < asideMenuItem.length; i++){
+  asideMenuItem[i].addEventListener('click', function(){
+    for(var j = 0; j < asideMenuItem.length; j++){
+      asideMenuItem[j].classList.remove('active');
+    }
+    this.classList.add('active');
+    this.getAttribute("title");
+  });
+}
+
+
 // 메인 비주얼
 $(".main_visual").slick({
   slidesToShow: 1,
@@ -120,6 +133,7 @@ const tabListArea = document.querySelectorAll('.tab_area_section .tab_area_butto
 const contentsArea = document.querySelectorAll('.tab_area_section .tab_area_contents');
 const tabListCourse = document.querySelectorAll('.tab_area_course .course');
 let activeContArea = '';
+
 for(var i = 0; i < tabListArea.length; i++){
   tabListArea[i].querySelector('.tab_area_button > a').addEventListener('click', function(e){
     e.preventDefault();
@@ -132,7 +146,8 @@ for(var i = 0; i < tabListArea.length; i++){
     document.querySelector(activeContArea).style.display = 'block';
   });
 }
-for(var i = 0; i < tabListCourse.length; i++){
+
+for(var i = 0; i < (tabListCourse).length; i++){
   tabListCourse[i].querySelector('.course_button').addEventListener('click', function(e){
     e.preventDefault();
     for(var j = 0; j < tabListCourse.length; j++){
@@ -144,68 +159,71 @@ for(var i = 0; i < tabListCourse.length; i++){
 
 $(".item_circle1").slick({
   slidesToShow: 6,
-  infinite: false,
+  infinite: true,
   arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
   variableWidth: true,
   responsive: [
     {
+      breakpoint: 1281,
+      variableWidth: false,
+      settings : {
+        variableWidth: false,
+      }
+    },
+    {
       breakpoint: 1025,
       settings : {
-        variableWidth: true,
+        variableWidth: false,
       }
     },
     {
       breakpoint: 641,
       settings: {
         slidesToShow: 5,
-        variableWidth: true,
+        variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     },
     {
       breakpoint: 481,
       settings: {
         slidesToShow: 4,
-        variableWidth: true,
+        variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     },
     {
       breakpoint: 361,
       settings: {
         slidesToShow: 3,
-        variableWidth: true,
+        variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     }
   ],
 });
+
 $(".item_circle2").slick({
   slidesToShow: 6,
-  infinite: false,
+  infinite: true,
   arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
   variableWidth: true,
   responsive: [
     {
-      breakpoint: 1025,
+      breakpoint: 1281,
+      variableWidth: false,
       settings : {
-        variableWidth: true,
+        variableWidth: false,
       }
     },
     {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 5,
+      breakpoint: 1025,
+      settings : {
         variableWidth: false,
-        arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     },
     {
@@ -214,8 +232,6 @@ $(".item_circle2").slick({
         slidesToShow: 5,
         variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     },
     {
@@ -224,8 +240,6 @@ $(".item_circle2").slick({
         slidesToShow: 4,
         variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     },
     {
@@ -234,52 +248,54 @@ $(".item_circle2").slick({
         slidesToShow: 3,
         variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     }
   ],
 });
+
 $(".item_circle3").slick({
   slidesToShow: 6,
-  infinite: false,
+  infinite: true,
   arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
   variableWidth: true,
   responsive: [
     {
+      breakpoint: 1281,
+      variableWidth: false,
+      settings : {
+        variableWidth: false,
+      }
+    },
+    {
       breakpoint: 1025,
       settings : {
-        variableWidth: true,
+        variableWidth: false,
       }
     },
     {
       breakpoint: 641,
       settings: {
         slidesToShow: 5,
-        variableWidth: true,
+        variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     },
     {
       breakpoint: 481,
       settings: {
         slidesToShow: 4,
-        variableWidth: true,
+        variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     },
     {
       breakpoint: 361,
       settings: {
         slidesToShow: 3,
-        variableWidth: true,
+        variableWidth: false,
         arrows: true,
-        prevArrow: ".item_circle_controller .arrow_zone_circle_prev",
-        nextArrow: ".item_circle_controller .arrow_zone_circle_next",
       }
     }
   ],
@@ -407,8 +423,8 @@ $(".arrow_board_pause").click(function () {
 const selectBtn = document.querySelectorAll('.footer_top_select .select_btn');
 selectBtn.forEach(function(lb){
     lb.addEventListener('click', e => {
-        let optionList = lb.nextElementSibling;
-        let selectItem = optionList.querySelectorAll('.footer_top_select .select_item');
+        // let optionList = lb.nextElementSibling;
+        // let selectItem = optionList.querySelectorAll('.footer_top_select .select_item');
         clickLabel(lb);
     })
 });
