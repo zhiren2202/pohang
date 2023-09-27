@@ -46,7 +46,6 @@ for(var i = 0; i < asideMenuItem.length; i++){
       asideMenuItem[j].classList.remove('active');
     }
     this.classList.add('active');
-    this.getAttribute("title");
   });
 }
 
@@ -82,9 +81,9 @@ $(".main_visual_pause").click(function () {
 $(".quickmenu").slick({
   slidesToShow: 10,
   infinite: false,
-  arrows: true,
-  prevArrow: ".quickmenu_controller .arrow_board_prev",
-  nextArrow: ".quickmenu_controller .arrow_board_next",
+  arrows: false,
+  prevArrow: "<button class='arrow_board_prev' aria-label='Previous' type='button'></button>",
+  nextArrow: "<button class='arrow_board_next' aria-label='Next' type='button'></button>",
   responsive: [
     {
       breakpoint: 1281,
@@ -161,6 +160,8 @@ $(".item_circle1").slick({
   slidesToShow: 6,
   infinite: true,
   arrows: false,
+  prevArrow: "<button class='arrow_zone_circle_prev' aria-label='Previous' type='button'></button>",
+  nextArrow: "<button class='arrow_zone_circle_next' aria-label='Next' type='button'></button>",
   autoplay: true,
   autoplaySpeed: 2000,
   variableWidth: true,
@@ -209,6 +210,8 @@ $(".item_circle2").slick({
   slidesToShow: 6,
   infinite: true,
   arrows: false,
+  prevArrow: "<button class='arrow_zone_circle_prev' aria-label='Previous' type='button'></button>",
+  nextArrow: "<button class='arrow_zone_circle_next' aria-label='Next' type='button'></button>",
   autoplay: true,
   autoplaySpeed: 2000,
   variableWidth: true,
@@ -257,6 +260,8 @@ $(".item_circle3").slick({
   slidesToShow: 6,
   infinite: true,
   arrows: false,
+  prevArrow: "<button class='arrow_zone_circle_prev' aria-label='Previous' type='button'></button>",
+  nextArrow: "<button class='arrow_zone_circle_next' aria-label='Next' type='button'></button>",
   autoplay: true,
   autoplaySpeed: 2000,
   variableWidth: true,
@@ -311,8 +316,8 @@ $(".imgbanner").slick({
   autoplay: false,
   autoplaySpeed: 2000,
   arrows: true,
-  prevArrow: ".imgbanner_controller .arrow_board_prev",
-  nextArrow: ".imgbanner_controller .arrow_board_next",
+  prevArrow: ".imgbanner_group .arrow_board_prev",
+  nextArrow: ".imgbanner_group .arrow_board_next",
   dots: true,
   appendDots: ".imgbanner_paging",
   customPaging: function (slider, i) {
@@ -328,8 +333,8 @@ $(".event_month").slick({
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: true,
-  prevArrow: ".event_month_controller .arrow_board_prev",
-  nextArrow: ".event_month_controller .arrow_board_next",
+  prevArrow: ".event_month_group .arrow_board_prev",
+  nextArrow: ".event_month_group .arrow_board_next",
   responsive: [
     {
       breakpoint: 1025,
@@ -367,8 +372,8 @@ $(".event_week").slick({
   // autoplay: true,
   speed: 1000,
   arrows: true,
-  prevArrow: ".event_week_controller .arrow_board_prev",
-  nextArrow: ".event_week_controller .arrow_board_next",
+  prevArrow: ".event_week_group .arrow_board_prev",
+  nextArrow: ".event_week_group .arrow_board_next",
   dots: true,
   appendDots: ".event_week_paging",
   customPaging: function (slider, i) {
@@ -382,13 +387,13 @@ $(".popupzone").slick({
   slidesToShow: 1,
   draggable: false,
   lazyLoad: 'progressive',
-  // slidesToScroll: 1,
+  slidesToScroll: 1,
   infinite: true,
-  // autoplay: true,
-  autoplaySpeed: 2000,
+  autoplay: true,
+  autoplaySpeed: 3000,
   arrows: true,
-  prevArrow: ".popupzone_controller .arrow_board_prev",
-  nextArrow: ".popupzone_controller .arrow_board_next",
+  prevArrow: ".popupzone .arrow_board_prev",
+  nextArrow: ".popupzone .arrow_board_next",
   dots: true,
   appendDots: ".popupzone_paging",
   customPaging: function (slider, i) {
