@@ -23,11 +23,6 @@
   padding: 0 1em;
 }
 
-@media screen and (max-width: 768px) {
-  [class*=section] {
-    padding: 0 1em;
-  }
-}
 .header {
   position: fixed;
   height: 5em;
@@ -378,7 +373,6 @@
   letter-spacing: 0;
   color: var(--navy);
 }
-
 .banner_title strong {
   color: var(--pink);
 }
@@ -386,51 +380,17 @@
 .banner_subtitle {
   font-size: 1.75em;
   font-weight: 600;
-  letter-spacing: -0.025;
+  letter-spacing: -0.025em;
 }
 
 .slick-dotted.slick-slider {
   margin-bottom: 0;
 }
 
-[class*=_controller] {
-  position: absolute;
-}
-
-[class*=_controller] button {
-  height: 100%;
-  float: left;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
 .controller_position-middle button {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-}
-
-button[class*=arrow_board_] {
-  width: 2.875em;
-  height: 2.875em;
-}
-
-.arrow_board_prev {
-  background-image: url(../images/arrow_review_board_prev.png);
-}
-
-.arrow_board_next {
-  background-image: url(../images/arrow_review_board_next.png);
-}
-
-.arrow_zone_circle_prev {
-  background-image: url(../images/arrow_zone_circle_prev.png);
-}
-
-.arrow_zone_circle_next {
-  background-image: url(../images/arrow_zone_circle_next.png);
 }
 
 .main_visual_wrapper {
@@ -535,61 +495,6 @@ button[class*=arrow_board_] {
   font-weight: 500;
   text-align: right;
   color: #fff;
-}
-
-.main_visual_controller {
-  bottom: 6.25em;
-  right: 0;
-}
-
-.main_visual_controller button[class*=main_visual_] {
-  width: 1.25em;
-  height: 4em;
-  margin: 0 1em;
-}
-
-.main_visual_prev {
-  background-image: url(../images/main_visual_prev.png);
-}
-
-.main_visual_next {
-  background-image: url(../images/main_visual_next.png);
-}
-
-.main_visual_play {
-  background-image: url(../images/main_visual_play.png);
-}
-
-.main_visual_pause {
-  background-image: url(../images/main_visual_pause.png);
-}
-
-.main_visual_play,
-.main_visual_pause {
-  display: none;
-}
-
-.main_visual_play.on,
-.main_visual_pause.on {
-  display: inline-block;
-}
-
-.arrow_board_play {
-  background-image: url(../images/arrow_review_board_play.png);
-}
-
-.arrow_board_pause {
-  background-image: url(../images/arrow_review_board_pause.png);
-}
-
-.arrow_board_play,
-.arrow_board_pause {
-  display: none;
-}
-
-.arrow_board_play.on,
-.arrow_board_pause.on {
-  display: inline-block;
 }
 
 [class*=_paging] {
@@ -873,19 +778,6 @@ button[class*=arrow_board_] {
   margin: 1em auto;
 }
 
-.quickmenu_controller {
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-}
-.quickmenu_controller button.arrow_board_prev {
-  left: 2.5%;
-}
-.quickmenu_controller button.arrow_board_next {
-  right: 2.5%;
-}
-
 .quickmenu {
   width: 100%;
 }
@@ -933,6 +825,17 @@ button[class*=arrow_board_] {
 .quickmenu [class*=slide]:hover .blank::after, .quickmenu [class*=slide]:focus .blank::after, .quickmenu [class*=slide]:focus-visible .blank::after {
   background-image: url(../images/btn_blank_on.png);
 }
+.quickmenu .arrow_board_prev,
+.quickmenu .arrow_board_next {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.quickmenu .arrow_board_prev {
+  left: 0;
+}
+.quickmenu .arrow_board_next {
+  right: 0;
+}
 .quickmenu .slide1 .quickmenu_icon {
   background-position-x: 0em;
 }
@@ -965,7 +868,7 @@ button[class*=arrow_board_] {
 }
 
 @media screen and (max-width: 1280px) {
-  .quickmenu {
+  .quickmenu .slick-list {
     width: 90%;
     margin: 0 auto;
   }
@@ -1075,6 +978,11 @@ button[class*=arrow_board_] {
 .imgbanner_section .imgbanner_group .imgbanner_controller {
   top: 2em;
   right: 2em;
+}
+.imgbanner_section .imgbanner_group .imgbanner_controller .arrow_board_prev,
+.imgbanner_section .imgbanner_group .imgbanner_controller .arrow_board_next {
+  position: relative;
+  float: left;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1531,50 +1439,6 @@ button[class*=arrow_board_] {
   position: relative;
   margin: 2em 0;
 }
-.item_circle_group [class*=arrow_zone_circle_] {
-  width: 2.5em;
-  height: 2.5em;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media screen and (min-width: 641px) {
-  .item_circle_group [class*=arrow_zone_circle_] {
-    display: none;
-  }
-}
-.item_circle_group [class*=item_circle] .slick-prev,
-.item_circle_group [class*=item_circle] .slick-next {
-  width: 2.5em;
-  height: 2.5em;
-  font-size: inherit;
-}
-.item_circle_group [class*=item_circle] .slick-prev::before,
-.item_circle_group [class*=item_circle] .slick-next::before {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.item_circle_group [class*=item_circle] .slick-prev {
-  left: 0;
-}
-.item_circle_group [class*=item_circle] .slick-prev::before {
-  background-image: url(../images/arrow_zone_circle_prev.png);
-}
-.item_circle_group [class*=item_circle] .slick-next {
-  right: 0;
-}
-.item_circle_group [class*=item_circle] .slick-next::before {
-  background-image: url(../images/arrow_zone_circle_next.png);
-}
 .item_circle_group [class*=item_circle] .slick-slide {
   margin: 0 0.625em;
   width: 7em;
@@ -1583,6 +1447,11 @@ button[class*=arrow_board_] {
 .item_circle_group [class*=item_circle] .slick-slide > div {
   width: 100%;
   height: 100%;
+}
+.item_circle_group [class*=item_circle] .arrow_zone_circle_prev,
+.item_circle_group [class*=item_circle] .arrow_zone_circle_next {
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .item_circle_group [class*=item_circle] [class*=item_circle_slide] {
   width: 100%;
@@ -1693,17 +1562,16 @@ button[class*=arrow_board_] {
   margin-bottom: 5em;
 }
 
-.event_section > [class*=_group] {
-  float: left;
-  height: 100%;
-  position: relative;
-}
-
 .event_month_group {
-  width: 70%;
+  width: 69%;
   height: 100%;
-  margin: 0 1% 0 0;
+  margin: 1em 2% 0 0;
   vertical-align: middle;
+  position: relative;
+  float: left;
+}
+.event_month_group .arrow_board_prev,
+.event_month_group .arrow_board_next {
   position: relative;
   float: left;
 }
@@ -1711,7 +1579,6 @@ button[class*=arrow_board_] {
 .event_month .slick-list {
   margin: 0 -0.75em;
 }
-
 .event_month .slick-slide {
   margin: 0 0.75em;
 }
@@ -1728,8 +1595,7 @@ button[class*=arrow_board_] {
   transform: scale(1.1);
   transition: all 0.2s ease-in-out;
 }
-
-.event_month_title {
+[class*=event_month_slide] .event_month_title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1739,15 +1605,13 @@ button[class*=arrow_board_] {
   font-weight: 500;
   color: #222222;
 }
-
-.event_month_calendar {
+[class*=event_month_slide] .event_month_calendar {
   padding: 0 0.5em;
   font-size: 1em;
   font-weight: 400;
   color: #555555;
 }
-
-.event_month_calendar::before {
+[class*=event_month_slide] .event_month_calendar::before {
   content: "";
   display: block;
   float: left;
@@ -1761,30 +1625,41 @@ button[class*=arrow_board_] {
 }
 
 .event_month_controller {
-  top: 0.2em;
+  top: 0.5em;
   right: 3em;
 }
 
 .event_week_controller {
-  top: 1.875em;
-  right: 0.8em;
+  top: 1.5em;
+  right: 1em;
 }
 
 .popupzone_controller {
-  top: -0.2em;
-  right: 0.4em;
+  top: 0;
+  right: 0;
+}
+.popupzone_controller .arrow_board_prev,
+.popupzone_controller .arrow_board_next {
+  position: relative;
+  float: left;
 }
 
 .event_week_group {
+  position: relative;
   width: 29%;
   height: 100%;
+  float: left;
   padding: 0 1em;
   background-color: #2c479b;
   color: #ffffff;
 }
-
 .event_week_group h3 {
-  margin: 1.25em 0;
+  margin: 1em 0;
+}
+.event_week_group .arrow_board_prev,
+.event_week_group .arrow_board_next {
+  position: relative;
+  float: left;
 }
 
 .event_week_list {
@@ -1823,22 +1698,31 @@ button[class*=arrow_board_] {
   letter-spacing: 0;
 }
 
-.popupzone_group,
 .main_board {
-  width: 49%;
-  overflow: hidden;
-  float: right;
   position: relative;
+  float: right;
+  width: 49%;
+  margin: 0 0 0 2%;
+  overflow: hidden;
 }
-
-.popupzone_group h3,
 .main_board h3 {
   padding-bottom: 1em;
   color: #222222;
 }
+.main_board .board_more {
+  width: 1.75em;
+  height: 1.75em;
+  top: 0.475em;
+}
 
 .popupzone_group {
-  margin-right: 1%;
+  position: relative;
+  float: left;
+  width: 49%;
+}
+.popupzone_group h3 {
+  padding-bottom: 1em;
+  color: #222222;
 }
 
 .popupzone {
@@ -1846,8 +1730,7 @@ button[class*=arrow_board_] {
   height: 0;
   padding-bottom: 54%;
 }
-
-.popupzone img {
+.popupzone .slick-slide img {
   width: 100%;
 }
 
@@ -1860,17 +1743,16 @@ button[class*=arrow_board_] {
 }
 
 .board_more {
-  width: 1.625em;
-  height: 1.625em;
-  display: inline-block;
+  width: 2em;
+  height: 2em;
+  display: block;
   position: absolute;
-  top: -0.4em;
-  right: 1em;
-  transform: translate(0, 50%);
+  top: 0.925em;
+  right: 0;
   background-image: url(../images/btn_more_1.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .board_row {
@@ -1922,6 +1804,17 @@ button[class*=arrow_board_] {
   background-size: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  .event_section .banner_title {
+    font-size: 2em;
+  }
+  .event_month_group {
+    width: 60%;
+  }
+  .event_week_group {
+    width: 38%;
+  }
+}
 @media (min-width: 801px) and (max-width: 1024px) {
   .board_row {
     height: 5em;
@@ -1945,7 +1838,6 @@ button[class*=arrow_board_] {
 @media screen and (max-width: 820px) {
   .event_wrapper .event_section .event_month_group {
     width: 100%;
-    padding: 0 0 4em 0;
     margin: 0 0 2em 0;
   }
   .event_wrapper .event_section .event_month_group .event_month_controller {
@@ -1959,7 +1851,6 @@ button[class*=arrow_board_] {
     margin: 0 0 2em 0;
   }
   .event_wrapper .event_section .event_week_group .banner_subtitle {
-    padding: 0.5em 0;
     text-align: center;
   }
   .event_wrapper .event_section .event_week_group .event_week_controller {
@@ -2042,6 +1933,8 @@ button[class*=arrow_board_] {
 .link_banner_controller [class*=arrow_board_] {
   width: 2.25em;
   height: 2.25em;
+  position: relative;
+  float: left;
 }
 
 @media screen and (max-width: 1280px) {

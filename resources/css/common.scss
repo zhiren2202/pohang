@@ -10,3 +10,106 @@
     */
 }
 
+/* 슬라이드버튼 */
+[class*="_controller"] {
+    position: absolute;
+}
+
+.main_visual_controller {
+    height: 4em;
+    bottom: 6.25em;
+    right: 0;
+}
+
+.main_visual_controller {
+    button[class*="main_visual_"] {
+        width: 1.25em;
+        margin: 1em 1em 0;
+        height: 50%;
+        float: left;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.main_visual_prev {
+    background-image: url(../images/main_visual_prev.png);
+}
+
+.main_visual_next {
+    background-image: url(../images/main_visual_next.png);
+}
+
+.main_visual_play {
+    background-image: url(../images/main_visual_play.png);
+}
+
+.main_visual_pause {
+    background-image: url(../images/main_visual_pause.png);
+}
+
+.main_visual_play,
+.main_visual_pause {
+    display: none;
+}
+
+.main_visual_play.on,
+.main_visual_pause.on {
+    display: inline-block;
+}
+
+button[class*=arrow_] {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.arrow_board_play,
+.arrow_board_pause {
+    display: none;
+
+    &.on {
+        display: inline-block;
+    }
+}
+
+.arrow_board_prev,
+.arrow_board_next {
+    width: 2.875em;
+    height: 2.875em;
+}
+
+.arrow_zone_circle_prev,
+.arrow_zone_circle_next {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.arrow_board_play {
+    background-image: url(../images/arrow_review_board_play.png);
+}
+
+.arrow_board_pause {
+    background-image: url(../images/arrow_review_board_pause.png);
+}
+
+.arrow_board_prev {
+    background-image: url(../images/arrow_review_board_prev.png);
+}
+
+.arrow_board_next {
+    background-image: url(../images/arrow_review_board_next.png);
+}
+
+.arrow_zone_circle_prev {
+    background-image: url(../images/arrow_zone_circle_prev.png);
+}
+
+.arrow_zone_circle_next {
+    background-image: url(../images/arrow_zone_circle_next.png);
+}
