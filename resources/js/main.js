@@ -110,11 +110,11 @@ $(".quickmenu").slick({
 });
 
 // BEST 퐝퐝
-const tabList = document.querySelectorAll('.tab_best_section .tab_best_button');
-const contents = document.querySelectorAll('.tab_best_section .tab_best_contents')
+const tabList = document.querySelectorAll('.main_best_section .main_best_button');
+const contents = document.querySelectorAll('.main_best_section .main_best_contents')
 let activeCont = '';
 for(var i = 0; i < tabList.length; i++){
-  tabList[i].querySelector('.tab_best_button > a').addEventListener('click', function(e){
+  tabList[i].querySelector('.main_best_button > a').addEventListener('click', function(e){
     e.preventDefault();
     for(var j = 0; j < tabList.length; j++){
       tabList[j].classList.remove('active');
@@ -128,13 +128,13 @@ for(var i = 0; i < tabList.length; i++){
 
 
 // 권역별 즐겨퐝
-const tabListArea = document.querySelectorAll('.tab_area_section .tab_area_button');
-const contentsArea = document.querySelectorAll('.tab_area_section .tab_area_contents');
-const tabListCourse = document.querySelectorAll('.tab_area_course .course');
+const tabListArea = document.querySelectorAll('.main_area_section .main_area_button');
+const contentsArea = document.querySelectorAll('.main_area_section .main_area_contents');
+const tabListCourse = document.querySelectorAll('.main_area_course .course');
 let activeContArea = '';
 
 for(var i = 0; i < tabListArea.length; i++){
-  tabListArea[i].querySelector('.tab_area_button > a').addEventListener('click', function(e){
+  tabListArea[i].querySelector('.main_area_button > a').addEventListener('click', function(e){
     e.preventDefault();
     for(var j = 0; j < tabListArea.length; j++){
       tabListArea[j].classList.remove('active');
@@ -307,7 +307,7 @@ $(".item_circle3").slick({
 });
 
 // TV에 나온 퐝
-$(".imgbanner").slick({
+$(".main_place").slick({
   fade: true,
   speed: 1000,
   slidesToShow: 1,
@@ -316,25 +316,25 @@ $(".imgbanner").slick({
   autoplay: false,
   autoplaySpeed: 2000,
   arrows: true,
-  prevArrow: ".imgbanner_group .arrow_board_prev",
-  nextArrow: ".imgbanner_group .arrow_board_next",
+  prevArrow: ".main_place_group .arrow_board_prev",
+  nextArrow: ".main_place_group .arrow_board_next",
   dots: true,
-  appendDots: ".imgbanner_paging",
+  appendDots: ".main_place_paging",
   customPaging: function (slider, i) {
     return "<span>" + (i + 1) + "</span>" + "/" + slider.slideCount;
   },
 });
 
 // 이달의 축제/문화 행사
-$(".event_month").slick({
+$(".main_carnival_month").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   infinite: true,
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: true,
-  prevArrow: ".event_month_group .arrow_board_prev",
-  nextArrow: ".event_month_group .arrow_board_next",
+  prevArrow: ".main_carnival_month_group .arrow_board_prev",
+  nextArrow: ".main_carnival_month_group .arrow_board_next",
   responsive: [
     {
       breakpoint: 1025,
@@ -359,12 +359,12 @@ $(".event_month").slick({
     }
   ],
   dots: true,
-  appendDots: ".event_month_paging",
+  appendDots: ".main_carnival_month_paging",
   customPaging: function (slider, i) {
     return "<span>" + (i + 1) + "</span>" + "/" + slider.slideCount;
   },
 });
-$(".event_week").slick({
+$(".main_carnival_week").slick({
   fade: true,
   slidesToShow: 1,
   // slidesToScroll: 1,
@@ -372,10 +372,10 @@ $(".event_week").slick({
   // autoplay: true,
   speed: 1000,
   arrows: true,
-  prevArrow: ".event_week_group .arrow_board_prev",
-  nextArrow: ".event_week_group .arrow_board_next",
+  prevArrow: ".main_carnival_week_group .arrow_board_prev",
+  nextArrow: ".main_carnival_week_group .arrow_board_next",
   dots: true,
-  appendDots: ".event_week_paging",
+  appendDots: ".main_carnival_week_paging",
   customPaging: function (slider, i) {
     return i + 1 + "/" + slider.slideCount;
   },
@@ -402,7 +402,7 @@ $(".popupzone").slick({
 });
 
 // 배너모음
-$(".link_banner").slick({
+$(".main_link").slick({
   slidesToShow: 8,
   slidesToScroll: 1,
   infinite: true,
@@ -410,16 +410,16 @@ $(".link_banner").slick({
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: true,
-  prevArrow: ".link_banner_controller .arrow_board_prev",
-  nextArrow: ".link_banner_controller .arrow_board_next",
+  prevArrow: ".main_link_controller .arrow_board_prev",
+  nextArrow: ".main_link_controller .arrow_board_next",
 });
 $(".arrow_board_play").click(function () {
-  $(".link_banner").slick("slickPlay");
+  $(".main_link").slick("slickPlay");
   $(".arrow_board_play").removeClass("on");
   $(".arrow_board_pause").addClass("on");
 });
 $(".arrow_board_pause").click(function () {
-  $(".link_banner").slick("slickPause");
+  $(".main_link").slick("slickPause");
   $(".arrow_board_pause").removeClass("on");
   $(".arrow_board_play").addClass("on");
 });
