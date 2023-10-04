@@ -971,11 +971,11 @@
   background-size: cover;
 }
 .main_place_section .main_place_group .main_place_controller {
-  top: 2em;
+  top: 1.5em;
   right: 2em;
 }
-.main_place_section .main_place_group .main_place_controller .arrow_board_prev,
-.main_place_section .main_place_group .main_place_controller .arrow_board_next {
+.main_place_section .main_place_group .main_place_controller .arrow_board_prev_white,
+.main_place_section .main_place_group .main_place_controller .arrow_board_next_white {
   position: relative;
   float: left;
 }
@@ -1578,6 +1578,12 @@
   position: relative;
   float: left;
 }
+.main_carnival_month_group .board_more {
+  width: 2em;
+  height: 2em;
+  top: 0.5em;
+  right: 0;
+}
 
 .main_carnival_month .slick-list {
   margin: 0 -0.75em;
@@ -1716,6 +1722,7 @@
   width: 1.75em;
   height: 1.75em;
   top: 0.475em;
+  right: 0;
 }
 
 .popupzone_group {
@@ -1745,24 +1752,9 @@
   width: 100%;
 }
 
-.board_more {
-  width: 2em;
-  height: 2em;
-  display: block;
-  position: absolute;
-  top: 0.5em;
-  right: 0;
-  background-image: url(../images/btn_more_1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .board_row {
   position: relative;
-  padding: 0 6em 0 8em;
-  height: 5.5em;
-  line-height: 5.5em;
+  padding: 2em 6em 2em 8em;
   border-bottom: 1px solid #cccccc;
   color: #333333;
 }
@@ -1820,8 +1812,7 @@
 }
 @media (min-width: 801px) and (max-width: 1024px) {
   .board_row {
-    height: 5em;
-    line-height: 5em;
+    padding: 1.625em 6em 1.625em 8em;
   }
   .board_title {
     font-size: 1.25em;

@@ -122,3 +122,12 @@ button[class*=arrow_] {
 .arrow_zone_circle_next {
   background-image: url(../images/arrow_zone_circle_next.png);
 }
+
+.board_more {
+  display: block;
+  position: absolute;
+  background-image: url(../images/btn_more_1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

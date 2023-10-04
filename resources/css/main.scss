@@ -1079,11 +1079,11 @@
     }
   
     .main_place_controller {
-      top: 2em;
+      top: 1.5em;
       right: 2em;
 
-      .arrow_board_prev,
-      .arrow_board_next {
+      .arrow_board_prev_white,
+      .arrow_board_next_white {
         position: relative;
         float: left;
       }
@@ -1871,12 +1871,6 @@
   margin-bottom: 5em;
 }
 
-// .main_carnival_section > [class*="_group"] {
-//   float: left;
-//   height: 100%;
-//   position: relative;
-// }
-
 .main_carnival_month_group {
   width: 69%;
   height: 100%;
@@ -1889,6 +1883,13 @@
   .arrow_board_next {
     position: relative;
     float: left;
+  }
+
+  .board_more {
+    width: 2em;
+    height: 2em;
+    top: 0.5em;
+    right: 0;
   }
 }
 
@@ -2044,6 +2045,7 @@
     width: 1.75em;
     height: 1.75em;
     top: 0.475em;
+    right: 0;
   }
 }
 
@@ -2081,24 +2083,9 @@
   }
 }
 
-.board_more {
-  width: 2em;
-  height: 2em;
-  display: block;
-  position: absolute;
-  top: 0.5em;
-  right: 0;
-  background-image: url(../images/btn_more_1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .board_row {
   position: relative;
-  padding: 0 6em 0 8em;
-  height: 5.5em;
-  line-height: 5.5em;
+  padding: 2em 6em 2em 8em;
   border-bottom: 1px solid #cccccc;
   color: #333333;
 }
@@ -2161,8 +2148,7 @@
 
 @media (min-width: 801px) and (max-width: 1024px) {
   .board_row {
-    height: 5em;
-    line-height: 5em;
+    padding: 1.625em 6em 1.625em 8em;
   }
 
   .board_title {
