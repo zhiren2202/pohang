@@ -526,7 +526,7 @@
 .main_place_paging,
 .main_carnival_month_paging,
 .main_carnival_week_paging,
-.popupzone_paging {
+.main_popupzone_paging {
   line-height: 2.875em;
 }
 
@@ -1347,29 +1347,28 @@
 .main_area .main_area_contents .tab_page_contents .main_area_course .course:nth-of-type(3) .course_button {
   background-color: #288ed7;
 }
-.main_area .main_area_contents .tab_page_map {
-  width: 35%;
-  position: absolute;
-  top: 0;
-  right: 1em;
-}
-
 @media screen and (max-width: 1280px) {
   .main_area .main_area_contents .tab_page_contents {
     padding: 0 25em 0 0;
-  }
-  .main_area .main_area_contents .tab_page_map {
-    width: 30%;
   }
 }
 @media screen and (max-width: 840px) {
   .main_area .main_area_contents .tab_page_contents {
     padding: 0 20em 0 0;
   }
+}
+.main_area .main_area_contents .tab_page_map {
+  width: 35%;
+  position: absolute;
+  top: 0;
+  right: 1em;
+}
+@media screen and (max-width: 1280px) {
   .main_area .main_area_contents .tab_page_map {
-    width: 35%;
+    width: 30%;
   }
 }
+
 @media screen and (max-width: 768px) {
   .main_area_wrapper .main_area_section .banner_title {
     width: 100%;
@@ -1518,7 +1517,6 @@
 @media screen and (max-width: 1024px) {
   .item_circle_group [class*=item_circle] .slick-slide {
     height: 100%;
-    margin: 0 1.5em;
   }
   .item_circle_group [class*=item_circle] [class*=item_circle_slide] {
     background-color: transparent;
@@ -1534,6 +1532,25 @@
     border-radius: 50%;
     margin-bottom: 1em;
     background-size: 470%;
+  }
+  .item_circle_group [class*=item_circle] .item_circle_slide1::before {
+    background-position: 0.8em 1em;
+  }
+  .item_circle_group [class*=item_circle] .item_circle_slide2::before {
+    background-position: -4.4em 0.5em;
+  }
+  .item_circle_group [class*=item_circle] .item_circle_slide3::before {
+    background-position: -9.4em 1em;
+  }
+  .item_circle_group [class*=item_circle] .item_circle_slide4::before {
+    background-position: -14.6em 0.6em;
+  }
+  .item_circle_group [class*=item_circle] .item_circle_slide5::before {
+    background-position: -21em 0.5em;
+    background-size: 500%;
+  }
+  .item_circle_group [class*=item_circle] .item_circle_slide6::before {
+    background-position: -24.8em 0.8em;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1569,7 +1586,6 @@
   width: 69%;
   height: 100%;
   margin: 1em 2% 0 0;
-  vertical-align: middle;
   position: relative;
   float: left;
 }
@@ -1643,12 +1659,12 @@
   right: 1em;
 }
 
-.popupzone_controller {
+.main_popupzone_controller {
   top: 0;
   right: 0;
 }
-.popupzone_controller .arrow_board_prev,
-.popupzone_controller .arrow_board_next {
+.main_popupzone_controller .arrow_board_prev,
+.main_popupzone_controller .arrow_board_next {
   position: relative;
   float: left;
 }
@@ -1673,7 +1689,7 @@
 
 .main_carnival_week_list {
   display: block;
-  padding: 1.6em 0;
+  padding: 1.5em 0;
   border-top: 1px dashed #708dd0;
 }
 .main_carnival_week_list:first-of-type {
@@ -1725,22 +1741,22 @@
   right: 0;
 }
 
-.popupzone_group {
+.main_popupzone_group {
   position: relative;
   float: left;
   width: 49%;
 }
-.popupzone_group h3 {
+.main_popupzone_group h3 {
   padding-bottom: 1em;
   color: #222222;
 }
 
-.popupzone {
+.main_popupzone {
   overflow: hidden;
   height: 0;
   padding-bottom: 54%;
 }
-.popupzone .slick-slide img {
+.main_popupzone .slick-slide img {
   width: 100%;
 }
 
@@ -1817,7 +1833,7 @@
   .board_title {
     font-size: 1.25em;
   }
-  .popupzone {
+  .main_popupzone {
     padding-bottom: 58%;
   }
 }
@@ -1852,7 +1868,7 @@
     right: 50%;
     transform: translate(50%, 0);
   }
-  .main_carnival_wrapper .main_carnival_section .popupzone_group {
+  .main_carnival_wrapper .main_carnival_section .main_popupzone_group {
     padding: 0 0 3em 0;
   }
 }
@@ -1860,18 +1876,18 @@
   .main_carnival_wrapper {
     margin: 0;
   }
-  .popupzone_group,
+  .main_popupzone_group,
   .main_board {
     width: 100%;
     margin: 0 0 2em 0;
   }
-  .popupzone_group .banner_subtitle,
+  .main_popupzone_group .banner_subtitle,
   .main_board .banner_subtitle {
     text-align: center;
   }
 }
 @media screen and (max-width: 640px) {
-  .popupzone_group .popupzone_controller {
+  .main_popupzone_group .main_popupzone_controller {
     top: initial;
     bottom: 0;
     right: 50%;
