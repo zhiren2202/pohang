@@ -51,7 +51,7 @@ for(var i = 0; i < asideMenuItem.length; i++){
 
 
 // 메인 비주얼
-$(".main_visual").slick({
+$(".main_visual_slides").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
@@ -67,12 +67,12 @@ $(".main_visual").slick({
 });
 
 $(".main_visual_play").click(function () {
-  $(".main_visual").slick("slickPlay");
+  $(".main_visual_slides").slick("slickPlay");
   $(".main_visual_play").removeClass("on");
   $(".main_visual_pause").addClass("on");
 });
 $(".main_visual_pause").click(function () {
-  $(".main_visual").slick("slickPause");
+  $(".main_visual_slides").slick("slickPause");
   $(".main_visual_pause").removeClass("on");
   $(".main_visual_play").addClass("on");
 });
@@ -156,7 +156,7 @@ for(var i = 0; i < (tabListCourse).length; i++){
   });
 }
 
-$(".item_circle1").slick({
+$(".item_circle__1").slick({
   slidesToShow: 6,
   infinite: true,
   arrows: false,
