@@ -875,7 +875,7 @@
   position: relative;
   margin-bottom: 5em;
   width: 100%;
-  padding: 1em;
+  padding: 1em 2em;
   background-color: #ffffff;
   border: 1px solid #cccccc;
   box-shadow: 0px 5px 10px 0px rgba(136, 136, 136, 0.5);
@@ -919,8 +919,8 @@
   font-weight: 400;
 }
 .main_place_section .main_place_group .main_place [class*=slide] .main_place_text [class*=main_place_info].ellipsis {
-  line-height: 1.375em;
-  height: 2.75em;
+  line-height: 1.125em;
+  height: 2.25em;
 }
 .main_place_section .main_place_group .main_place [class*=slide] .main_place_text [class*=main_place_info_]::before {
   content: "";
@@ -1001,13 +1001,12 @@
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 50%;
-    background-color: #ffffff;
     background-size: 100%;
   }
-  .main_place_section .main_place_group .main_place_controller .arrow_board_prev {
+  .main_place_section .main_place_group .main_place_controller .arrow_board_prev_white {
     left: -1em;
   }
-  .main_place_section .main_place_group .main_place_controller .arrow_board_next {
+  .main_place_section .main_place_group .main_place_controller .arrow_board_next_white {
     right: -1em;
   }
   .main_place_section .main_place_group .main_place_controller .main_place_paging {
@@ -1629,7 +1628,7 @@
 }
 
 .main_carnival_month_controller {
-  top: 0.5em;
+  top: 0;
   right: 3em;
 }
 
@@ -1751,7 +1750,7 @@
   height: 2em;
   display: block;
   position: absolute;
-  top: 0.925em;
+  top: 0.5em;
   right: 0;
   background-image: url(../images/btn_more_1.png);
   background-repeat: no-repeat;
@@ -1842,10 +1841,10 @@
 @media screen and (max-width: 820px) {
   .main_carnival_wrapper .main_carnival_section .main_carnival_month_group {
     width: 100%;
-    margin: 0 0 2em 0;
+    margin: 0 0 4em 0;
   }
   .main_carnival_wrapper .main_carnival_section .main_carnival_month_group .main_carnival_month_controller {
-    top: 90%;
+    top: 100%;
     right: 50%;
     transform: translate(50%, 0);
   }
@@ -2198,4 +2197,4 @@
     width: 100%;
     margin: 1em 0;
   }
-}/*# sourceMappingURL=main.css.map */
+}

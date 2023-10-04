@@ -78,7 +78,9 @@ button[class*=arrow_] {
 }
 
 .arrow_board_prev,
-.arrow_board_next {
+.arrow_board_next,
+.arrow_board_prev_white,
+.arrow_board_next_white {
   width: 2.875em;
   height: 2.875em;
 }
@@ -105,10 +107,18 @@ button[class*=arrow_] {
   background-image: url(../images/arrow_review_board_next.png);
 }
 
+.arrow_board_prev_white {
+  background-image: url(../images/arrow_review_board_prev_white.png);
+}
+
+.arrow_board_next_white {
+  background-image: url(../images/arrow_review_board_next_white.png);
+}
+
 .arrow_zone_circle_prev {
   background-image: url(../images/arrow_zone_circle_prev.png);
 }
 
 .arrow_zone_circle_next {
   background-image: url(../images/arrow_zone_circle_next.png);
-}/*# sourceMappingURL=common.css.map */
+}
