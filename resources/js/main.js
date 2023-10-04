@@ -5,7 +5,7 @@ window.addEventListener("wheel", (e) => {
   yOffset > 0 ? header.classList.add("scroll") : header.classList.remove("scroll");
 });
 
-// 모바일메뉴
+// 모바일메뉴-펼치기,닫기
 document.querySelector(".header_btn_mobile_menu").addEventListener("click", function(e){
   if ( document.querySelector('.mobile_menu').classList.contains('open') ){
       document.querySelector('.mobile_menu').classList.remove('open');
@@ -21,7 +21,7 @@ document.querySelector(".btn_mobile_menu_close").addEventListener("click", funct
   }
 });
 
-// 모바일 탭메뉴
+// 모바일메뉴-탭메뉴
 const tabListMobile = document.querySelectorAll('.mobile_menu_list .mobile_tabmenu');
 const contentsMobile = document.querySelectorAll('.mobile_menu_contents')
 let activeContMobile = '';
@@ -38,7 +38,7 @@ for(var i = 0; i < tabListMobile.length; i++){
   });
 }
 
-// aside menu
+// 우측 네비게이션메뉴
 const asideMenuItem = document.querySelectorAll('.aside_menu_item');
 for(var i = 0; i < asideMenuItem.length; i++){
   asideMenuItem[i].addEventListener('click', function(){
@@ -367,10 +367,10 @@ $(".main_carnival_month").slick({
 $(".main_carnival_week").slick({
   fade: true,
   slidesToShow: 1,
-  // slidesToScroll: 1,
+  slidesToScroll: 1,
   infinite: true,
-  // autoplay: true,
-  speed: 1000,
+  autoplay: true,
+  speed: 1500,
   arrows: true,
   prevArrow: ".main_carnival_week_group .arrow_board_prev",
   nextArrow: ".main_carnival_week_group .arrow_board_next",
@@ -382,7 +382,7 @@ $(".main_carnival_week").slick({
 });
 
 // 팝업존
-$(".popupzone").slick({
+$(".main_popupzone").slick({
   fade: true,
   slidesToShow: 1,
   draggable: false,
@@ -392,10 +392,10 @@ $(".popupzone").slick({
   autoplay: true,
   autoplaySpeed: 3000,
   arrows: true,
-  prevArrow: ".popupzone .arrow_board_prev",
-  nextArrow: ".popupzone .arrow_board_next",
+  prevArrow: ".main_popupzone .arrow_board_prev",
+  nextArrow: ".main_popupzone .arrow_board_next",
   dots: true,
-  appendDots: ".popupzone_paging",
+  appendDots: ".main_popupzone_paging",
   customPaging: function (slider, i) {
     return "<span>" + (i + 1) + "</span>" + "/" + slider.slideCount;
   },
@@ -428,8 +428,6 @@ $(".arrow_board_pause").click(function () {
 const selectBtn = document.querySelectorAll('.footer_top_select .select_btn');
 selectBtn.forEach(function(lb){
     lb.addEventListener('click', e => {
-        // let optionList = lb.nextElementSibling;
-        // let selectItem = optionList.querySelectorAll('.footer_top_select .select_item');
         clickLabel(lb);
     })
 });
