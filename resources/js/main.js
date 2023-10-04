@@ -316,8 +316,8 @@ $(".main_place").slick({
   autoplay: false,
   autoplaySpeed: 2000,
   arrows: true,
-  prevArrow: ".main_place_group .arrow_board_prev",
-  nextArrow: ".main_place_group .arrow_board_next",
+  prevArrow: ".main_place_group .arrow_board_prev_white",
+  nextArrow: ".main_place_group .arrow_board_next_white",
   dots: true,
   appendDots: ".main_place_paging",
   customPaging: function (slider, i) {
